@@ -120,6 +120,9 @@
     body{ padding:8px 0 20px; }
     .page{ width:calc(100vw - 16px); height:auto; min-height:calc((100vw - 16px) * 1.78); padding-left:24px; padding-right:24px; }
     .dl{ width:auto; }
+    /* надпись сверху обложки - в общий поток, чтобы печать на неё не наезжала */
+    .cover .sc{ position:static !important; margin:0 0 26px !important; }
+    .cover.dark{ padding-top:40px; padding-bottom:44px; }
   }
 </style>
 </head>
