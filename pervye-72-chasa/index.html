@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Первые 72 часа после измены - Алёна Филатова">
+<meta property="og:description" content="Гайд первой помощи: что делать, чего не делать и как сохранить себя, когда кажется, что твой мир рухнул.">
+<meta property="og:image" content="https://alenafigi.github.io/podarki/pervye-72-chasa/oblozhka.jpg">
+<meta property="og:url" content="https://alenafigi.github.io/podarki/pervye-72-chasa/">
+<meta property="og:type" content="article">
+<meta name="description" content="Гайд первой помощи: что делать, чего не делать и как сохранить себя, когда кажется, что твой мир рухнул.">
+
+<title>Первые 72 часа после измены - Алёна Филатова</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+SC:wght@500;600&family=Marck+Script&display=swap" rel="stylesheet">
+<style>
+  /* Палитра «Царское Село» - подменяется сборщиком (build.py, палитра tsarskoe) */
+  :root{
+    --ivory:#F7FCF9; --card:#E4F4EC; --sky:#DFF3EA; --navy:#1F6B52; --gold:#4FAC84; --lilac:#C1725F; --ink:#1F2E29; --muted:#728A80;
+  }
+  @page{ size:108mm 192mm; margin:0; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:var(--ivory); }
+  body{ font-family:'Cormorant Garamond',serif; font-weight:500; color:var(--ink); font-size:17px; line-height:1.42;
+        font-variant-numeric:lining-nums; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:108mm; height:192mm; position:relative; overflow:hidden; page-break-after:always;
+         background:var(--ivory); padding:34px 30px 40px; display:flex; flex-direction:column; }
+  .page:last-child{ page-break-after:auto; }
+  /* двойная золотая рамка, как на приглашении */
+  .page:before{ content:""; position:absolute; inset:11px; border:1px solid var(--gold); pointer-events:none; }
+  .page:after{ content:""; position:absolute; inset:15px; border:.5px solid var(--gold); opacity:.55; pointer-events:none; }
+
+  .sc{ font-family:'Cormorant SC',serif; font-weight:600; letter-spacing:.2em; font-size:12px; color:var(--gold); text-align:center; }
+  h1,h2{ font-weight:500; color:var(--navy); line-height:1.05; text-align:center; }
+  h2{ font-size:33px; margin:6px 0 4px; }
+  h2 i, h1 i{ font-style:italic; }
+  .orn{ display:block; margin:8px auto 12px; width:120px; height:14px; }
+  p{ margin-bottom:9px; }
+  em{ font-style:italic; color:var(--navy); }
+  b{ font-weight:600; color:var(--navy); }
+  .center{ text-align:center; }
+  .fill{ flex:1; display:flex; flex-direction:column; justify-content:space-between; }
+  .foot{ position:absolute; bottom:22px; left:0; right:0; text-align:center; font-family:'Cormorant SC',serif;
+         font-size:9px; letter-spacing:.3em; color:var(--gold); }
+
+  /* обложка */
+  .cover{ padding:30px 28px 36px; align-items:center; }
+  .arch{ width:272px; height:370px; border-radius:136px 136px 4px 4px; overflow:hidden; margin:6px auto 0;
+         outline:1px solid var(--gold); outline-offset:5px; }
+  .arch img{ width:100%; height:100%; object-fit:cover; object-position:50% 45%; display:block; }
+  .cover h1{ font-size:48px; margin:24px 0 6px; }
+  .cover h1 i{ color:var(--gold); }
+  .cover .sub{ font-style:italic; font-size:17px; text-align:center; color:var(--ink); line-height:1.3; max-width:300px; }
+  .cover .sign{ margin-top:auto; font-family:'Marck Script',cursive; font-size:24px; color:var(--navy); }
+
+  /* тёмная обложка без фото */
+  .cover.dark{ background:var(--navy); justify-content:center; }
+  .cover.dark .sc{ color:#DFF3EA; }
+  .cover.dark h1{ color:var(--ivory); font-size:58px; margin:18px 0 10px; }
+  .cover.dark h1 i{ color:#DFF3EA; }
+  .cover.dark .sub{ color:#EFE3D8; font-size:18px; }
+  .cover.dark .sign{ color:#DFF3EA; margin-top:0; }
+  .seal{ width:150px; height:150px; margin:0 auto; display:block; }
+  /* письмо */
+  .letter p{ font-size:17.4px; }
+  .letter .big{ font-size:25px; font-style:italic; color:var(--navy); line-height:1.2; text-align:center; margin:6px 0 12px; }
+  .drop:first-letter{ float:left; font-size:58px; line-height:.82; padding:5px 7px 0 0; color:var(--gold); font-style:italic; }
+
+  /* 1980 / 2026 */
+  .era{ display:grid; grid-template-columns:1fr 1fr; column-gap:14px; margin-top:4px; }
+  .era .yr{ font-size:32px; text-align:center; color:var(--navy); font-style:italic; border-bottom:1px solid var(--gold); padding-bottom:2px; margin-bottom:6px; }
+  .era .yr.now{ color:var(--gold); }
+  .era div.c{ font-size:15.8px; line-height:1.25; padding:7px 0; border-bottom:.5px solid rgba(176,144,85,.35); }
+  .era div.c span{ display:block; font-family:'Cormorant SC',serif; font-size:11px; letter-spacing:.18em; color:var(--gold); }
+
+  /* цитата */
+  .quote-page{ background:var(--navy); color:var(--ivory); justify-content:center; }
+  .quote-page:before, .quote-page:after{ border-color:var(--gold); }
+  .quote-page .q{ font-size:34px; font-style:italic; line-height:1.18; text-align:center; color:var(--ivory); }
+  .quote-page .q b{ color:#DFF3EA; font-weight:500; }
+  .quote-page .sc{ color:#DFF3EA; }
+  .quote-page .share{ text-align:center; font-size:15px; font-style:italic; color:var(--sky); margin-top:22px; }
+
+  /* тест */
+  .check{ list-style:none; margin-top:2px; }
+  .check li{ display:flex; gap:10px; padding:5.5px 0; border-bottom:.5px solid rgba(176,144,85,.45); font-size:15.4px; line-height:1.25; }
+  .check li:last-child{ border-bottom:0; }
+  .box{ flex:0 0 18px; height:18px; border:1px solid var(--gold); margin-top:1px; font-size:10px; color:var(--gold);
+        display:flex; align-items:center; justify-content:center; font-family:'Cormorant SC',serif; }
+
+  /* результат */
+  .res{ padding:12px 16px; border:1px solid var(--gold); text-align:center; }
+  .res .n{ font-size:30px; font-style:italic; color:var(--gold); line-height:1; }
+  .res .t{ font-family:'Cormorant SC',serif; font-size:13px; letter-spacing:.16em; color:var(--navy); margin:3px 0 4px; }
+  .res p{ margin:0; font-size:15.6px; line-height:1.3; }
+  .res.dark{ background:var(--navy); border-color:var(--navy); color:var(--ivory); }
+  .res.dark .t{ color:#DFF3EA; } .res.dark .n{ color:#DFF3EA; }
+  .res.soft{ background:var(--card); }
+
+  /* шаги */
+  .step .num{ font-size:26px; font-style:italic; color:var(--gold); line-height:1; }
+  .step h3{ font-family:'Cormorant SC',serif; font-weight:600; font-size:14px; letter-spacing:.14em; color:var(--navy); margin:2px 0 3px; }
+  .step p{ font-size:15.8px; line-height:1.32; margin:0; }
+  .dont{ background:var(--card); padding:11px 16px; font-size:15.4px; text-align:center; font-style:italic; line-height:1.35; }
+
+  /* финал */
+  .final{ justify-content:center; }
+  .btn{ display:block; text-align:center; text-decoration:none; font-family:'Cormorant SC',serif; font-weight:600;
+        letter-spacing:.14em; font-size:14px; padding:14px; margin:14px 0 0; background:var(--navy); color:var(--ivory); }
+  .url{ display:block; text-align:center; font-size:12px; font-style:italic; color:var(--muted); text-decoration:none; margin-top:3px; }
+  .btn.ghost{ background:transparent; color:var(--navy); border:1px solid var(--gold); margin-top:10px; font-size:12.5px; padding:12px; }
+
+  @media screen{
+    html,body{ background:#E7E2DA; }
+    body{ padding:12px 0 24px; }
+    .page{ margin:0 auto 14px; box-shadow:0 6px 22px rgba(40,30,20,.14); }
+    .dl{ display:block; width:108mm; margin:4px auto 0; text-align:center; font-family:'Cormorant Garamond',serif;
+         font-style:italic; font-size:15px; color:#7C7A80; }
+  }
+  @media screen and (max-width:440px){
+    body{ padding:8px 0 20px; }
+    .page{ width:calc(100vw - 16px); height:auto; min-height:calc((100vw - 16px) * 1.78); padding-left:24px; padding-right:24px; }
+    .dl{ width:auto; }
+  }
+</style>
+</head>
+<body>
+<style>
+  /* дополнения для гайда «Первые 72 часа» */
+  .fill{ justify-content:center !important; gap:16px; }
+  .fill > *{ margin-bottom:0; }
+  .cover.dark, .quote-page{ background:linear-gradient(165deg,#1F8C63,#2FA97D 55%,#4FCB9E) !important; }
+  .cover.dark .note{ color:#E4F5EE; font-size:15px; line-height:1.4; text-align:center; max-width:300px; margin:14px auto 0; }
+  .cascade{ text-align:center; margin:4px 0 10px; }
+  .cascade p{ margin:0; font-style:italic; color:var(--navy); font-size:17px; line-height:1.5; }
+  .qa{ display:flex; gap:11px; }
+  .qa .n{ flex:0 0 20px; font-style:italic; font-size:25px; color:var(--gold); line-height:1; }
+  .qa .qt{ font-style:italic; font-weight:600; color:var(--navy); font-size:17px; line-height:1.25; }
+  .qa .qn{ font-size:15.4px; line-height:1.32; margin:3px 0 0; }
+  .ck{ list-style:none; }
+  .ck li{ display:flex; gap:10px; padding:5px 0; border-bottom:.5px solid rgba(79,172,132,.35); font-size:15.8px; line-height:1.28; }
+  .ck li:last-child{ border-bottom:0; }
+  .ck .box{ flex:0 0 17px; height:17px; border:1px solid var(--gold); margin-top:2px; }
+  .ck-h{ font-family:'Cormorant SC',serif; font-weight:600; letter-spacing:.14em; font-size:13.5px; color:var(--navy); margin:4px 0 2px; }
+  .toc{ list-style:none; counter-reset:s; }
+  .toc li{ counter-increment:s; display:flex; gap:12px; padding:10px 0; border-bottom:.5px solid rgba(79,172,132,.35); font-size:16px; line-height:1.28; }
+  .toc li:last-child{ border-bottom:0; }
+  .toc li:before{ content:counter(s, decimal-leading-zero); font-style:italic; color:var(--gold); font-size:17px; flex:0 0 22px; }
+  .card2{ background:var(--card); padding:13px 16px; border-left:2px solid var(--gold); }
+  .card2 p{ margin:0 0 6px; } .card2 p:last-child{ margin:0; }
+  h3.sub{ font-family:'Cormorant SC',serif; font-weight:600; font-size:14px; letter-spacing:.13em; color:var(--navy); text-align:center; margin:0 0 6px; }
+  .mint-btn{ display:flex; justify-content:space-between; align-items:center; text-decoration:none; padding:14px 18px; margin-top:10px;
+             font-family:'Cormorant SC',serif; font-weight:600; letter-spacing:.08em; font-size:13.5px; line-height:1.25; }
+  .mint-btn.a{ background:#1F8C63; color:#F3FBF7; } .mint-btn.b{ background:#C1725F; color:#FCF3EF; }
+  .mint-btn span.ar{ font-size:18px; }
+</style>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <symbol id="o" viewBox="0 0 120 14"><line x1="0" y1="7" x2="48" y2="7" stroke="#4FAC84" stroke-width=".8"/><path d="M60 1 L66 7 L60 13 L54 7 Z" fill="none" stroke="#4FAC84" stroke-width=".9"/><circle cx="60" cy="7" r="1.6" fill="#4FAC84"/><line x1="72" y1="7" x2="120" y2="7" stroke="#4FAC84" stroke-width=".8"/></symbol>
+  <symbol id="ow" viewBox="0 0 120 14"><line x1="0" y1="7" x2="48" y2="7" stroke="#DFF3EA" stroke-width=".8"/><path d="M60 1 L66 7 L60 13 L54 7 Z" fill="none" stroke="#DFF3EA" stroke-width=".9"/><circle cx="60" cy="7" r="1.6" fill="#DFF3EA"/><line x1="72" y1="7" x2="120" y2="7" stroke="#DFF3EA" stroke-width=".8"/></symbol>
+</defs></svg>
+
+<!-- 1. Обложка -->
+<section class="page cover dark">
+  <div class="sc" style="letter-spacing:.2em;font-size:12px;position:absolute;top:34px;left:0;right:0">Гайд первой помощи</div>
+  <svg class="seal" viewBox="0 0 200 200"><defs><path id="rp" d="M 22,100 A 78,78 0 1 1 178,100 A 78,78 0 1 1 22,100"/></defs>
+    <circle cx="100" cy="100" r="92" fill="none" stroke="#DFF3EA" stroke-width="1"/>
+    <text style="font-family:'Cormorant SC',serif;font-weight:600;font-size:13px;letter-spacing:.3em;fill:#DFF3EA"><textPath href="#rp" startOffset="0" textLength="486" lengthAdjust="spacing">АЛЁНА ФИЛАТОВА • АЛЁНА ФИЛАТОВА •</textPath></text>
+    <text x="100" y="124" text-anchor="middle" style="font-family:'Marck Script';font-size:64px;letter-spacing:-3px;fill:#FFFFFF">АФ</text>
+    <path d="M 72,133 Q 100,142 128,133" fill="none" stroke="#DFF3EA" stroke-width="1.2" stroke-linecap="round"/></svg>
+  <svg class="orn" style="margin-top:22px"><use href="#ow"/></svg>
+  <h1 style="font-size:50px">Первые 72 часа <i>после измены</i></h1>
+  <div class="sub">Что делать, чего не делать и как сохранить себя, когда кажется, что твой мир рухнул</div>
+  <div class="note">Если ты открыла телефон и увидела переписку. Если муж признался. Если ты пока даже не уверена в измене, но увидела то, после чего внутри всё перевернулось, - это для тебя.</div>
+</section>
+
+<!-- 2. Прежде чем начать -->
+<section class="page letter">
+  <div class="sc">Прежде чем начать</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <div class="big">Тебе не нужно прямо сейчас решать, сохранять ли брак.</div>
+    <div class="cascade">
+      <p>Не нужно немедленно становиться «лучшей женщиной».</p>
+      <p>Не нужно за один разговор вернуть любовь.</p>
+      <p>И не нужно сегодня принимать решение на всю жизнь.</p>
+    </div>
+    <p>Твоя первая задача - <b>пройти первые 72 часа так, чтобы не разрушить себя и не принимать важные решения исключительно из состояния шока.</b></p>
+    <p class="center"><em>Я собрала для тебя простой алгоритм.</em></p>
+  </div>
+  <div class="foot">ПЕРВЫЕ 72 ЧАСА</div>
+</section>
+
+<!-- 3. Содержание -->
+<section class="page">
+  <div class="sc">Содержание</div>
+  <h2>Как устроен <i>этот гайд</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <ol class="toc">
+    <li>Стоп: что происходит с тобой сейчас</li>
+    <li>Первые 24 часа: чего не делать</li>
+    <li>Как пережить эмоциональную волну</li>
+    <li>Разговор с мужем: что действительно важно выяснить</li>
+    <li>Телефон, переписки и желание всё проверить</li>
+    <li>Что делать, если он говорит: «Я больше тебя не люблю»</li>
+    <li>Вторые 24 часа: не решать судьбу брака</li>
+    <li>Третьи 24 часа: начать видеть реальную картину</li>
+    <li>Три вопроса, которые возвращают тебя к себе</li>
+    <li>Чек-лист первых 72 часов</li>
+  </ol>
+  <div class="foot">ПЕРВЫЕ 72 ЧАСА</div>
+</section>
+
+<!-- 4. Шаг 1 -->
+<section class="page">
+  <div class="sc">Шаг 1</div>
+  <h2><i>Стоп</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <h3 class="sub">С тобой сейчас происходит не «слабость»</h3>
+    <p class="center">После известия об измене психика может реагировать очень резко.</p>
+    <div class="cascade">
+      <p>Ты можешь плакать. Кричать. Не чувствовать вообще ничего.</p>
+      <p>Не спать. Не есть. Постоянно прокручивать разговор.</p>
+      <p>Представлять подробности. Хотеть немедленно всё выяснить.</p>
+      <p>Хотеть собрать вещи и уйти. Хотеть умолять мужа остаться.</p>
+      <p>Через час ненавидеть его. А ещё через час бояться его потерять.</p>
+    </div>
+    <p class="center"><b>Все эти реакции могут сменять друг друга.</b></p>
+    <p>Поэтому первые 72 часа - не лучшее время для окончательных решений. Сейчас твоя задача не в том, чтобы понять всю правду о браке. Твоя задача - немного вернуть себе способность думать.</p>
+  </div>
+  <div class="foot">ШАГ 1 · СТОП</div>
+</section>
+
+<!-- 5. Шаг 1 продолжение -->
+<section class="page">
+  <div class="sc">Шаг 1 · продолжение</div>
+  <h2>Сделай <i>прямо сейчас</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <ul class="ck">
+      <li><span class="box"></span>Поставь ноги на пол</li>
+      <li><span class="box"></span>Сделай несколько медленных выдохов</li>
+      <li><span class="box"></span>Выпей воды</li>
+      <li><span class="box"></span>Посмотри вокруг и назови несколько предметов, которые видишь</li>
+      <li><span class="box"></span>Если можешь - выйди на воздух</li>
+      <li><span class="box"></span>Позвони человеку, рядом с которым тебе безопасно</li>
+    </ul>
+    <div>
+      <p class="center" style="margin-bottom:4px"><em>И скажи себе:</em></p>
+      <div class="letter"><div class="big" style="font-size:24px">«Мне очень больно. Но мне не нужно решать всю свою жизнь сегодня».</div></div>
+    </div>
+  </div>
+  <div class="foot">ШАГ 1 · СТОП</div>
+</section>
+
+<!-- 6. Шаг 2 -->
+<section class="page">
+  <div class="sc">Шаг 2 · Первые 24 часа</div>
+  <h2>Чего сейчас <i>лучше не делать</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <p>Когда внутри паника, очень хочется действовать. Но некоторые действия дают кратковременное облегчение, а потом делают ситуацию ещё тяжелее.</p>
+    <h3 class="sub">Не принимай сегодня решения на всю жизнь</h3>
+    <p class="center">Не обязательно прямо сейчас решать:</p>
+    <div class="cascade">
+      <p>«Мы разводимся».</p>
+      <p>«Я никогда его не прощу».</p>
+      <p>«Я должна сохранить семью любой ценой».</p>
+    </div>
+    <p class="center">Ты можешь вернуться к этим вопросам позже, когда появится больше ясности.</p>
+  </div>
+  <div class="foot">ШАГ 2 · ПЕРВЫЕ 24 ЧАСА</div>
+</section>
+
+<!-- 7. Шаг 2: допрос -->
+<section class="page">
+  <div class="sc">Шаг 2 · продолжение</div>
+  <h2>Не устраивай <i>бесконечный допрос</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <p class="center">В состоянии шока мозг хочет получить <b>всю информацию</b>.</p>
+    <div class="cascade">
+      <p>Где? Когда? Сколько раз?</p>
+      <p>Что она красивее? Что вы делали? Где встречались?</p>
+      <p>Что ты ей писал?</p>
+    </div>
+    <p>Но подробности интимной жизни часто не помогают восстановить доверие. Они могут, наоборот, создавать навязчивые образы, которые потом трудно остановить.</p>
+    <p class="center">Сейчас важнее понять не каждую деталь прошлого, а <b>что происходит в настоящем</b>.</p>
+  </div>
+  <div class="foot">ШАГ 2 · ПЕРВЫЕ 24 ЧАСА</div>
+</section>
+
+<!-- 8. Шаг 2: сравнение и мольбы -->
+<section class="page">
+  <div class="sc">Шаг 2 · продолжение</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <h3 class="sub">Не сравнивай себя с другой женщиной</h3>
+    <div class="cascade">
+      <p>Не рассматривай её фотографии часами.</p>
+      <p>Не ищи её социальные сети.</p>
+      <p>Не выясняй, моложе ли она.</p>
+      <p>Не пытайся найти доказательство того, что она «хуже».</p>
+    </div>
+    <p class="center"><b>Её существование не определяет твою ценность.</b></p>
+    <svg class="orn"><use href="#o"/></svg>
+    <h3 class="sub">Не умоляй выбрать тебя</h3>
+    <p>Если ты сейчас боишься, что он уйдёт, желание сказать «Я всё изменю, только не уходи» - совершенно понятно. Но отношения, построенные на страхе потери, не становятся от этого безопаснее.</p>
+  </div>
+  <div class="foot">ШАГ 2 · ПЕРВЫЕ 24 ЧАСА</div>
+</section>
+
+<!-- 9. Шаг 2: ночью -->
+<section class="page letter">
+  <div class="sc">Шаг 2 · продолжение</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill" style="justify-content:center;gap:18px">
+    <h3 class="sub">Не принимай важных решений ночью</h3>
+    <p class="center">Если сейчас ночь и ситуация не требует немедленных действий, дай себе поспать.</p>
+    <div class="big">Иногда самое разумное решение первого дня - пережить этот день.</div>
+  </div>
+  <div class="foot">ШАГ 2 · ПЕРВЫЕ 24 ЧАСА</div>
+</section>
+
+<!-- 10. Шаг 3 -->
+<section class="page">
+  <div class="sc">Шаг 3</div>
+  <h2>Эмоциональная <i>волна</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <h3 class="sub">Тебе не нужно перестать чувствовать</h3>
+    <p>В первые часы невозможно приказать себе: «Успокойся». Поэтому вместо борьбы с эмоциями попробуй сделать им рамку.</p>
+    <div>
+      <h3 class="sub">Правило 20 минут</h3>
+      <p class="center" style="margin-bottom:4px">Когда тебя накрывает:</p>
+      <ul class="ck">
+        <li><span class="box"></span>Не пиши мужу в этот момент</li>
+        <li><span class="box"></span>Не звони другой женщине</li>
+        <li><span class="box"></span>Не проверяй телефон</li>
+        <li><span class="box"></span>Не принимай решений</li>
+        <li><span class="box"></span>Дай себе 20 минут</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot">ШАГ 3 · ЭМОЦИОНАЛЬНАЯ ВОЛНА</div>
+</section>
+
+<!-- 11. Шаг 3 продолжение -->
+<section class="page letter">
+  <div class="sc">Шаг 3 · продолжение</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill" style="justify-content:center;gap:16px">
+    <p class="center">За эти 20 минут: вода, душ, прогулка, дыхание, разговор с близким человеком, запись мыслей на бумагу.</p>
+    <p class="center">После этого снова спроси себя:</p>
+    <div class="big">«Мне действительно нужно сейчас что-то делать - или мне просто очень больно?»</div>
+    <p class="center"><em>Это разные вещи.</em></p>
+  </div>
+  <div class="foot">ШАГ 3 · ЭМОЦИОНАЛЬНАЯ ВОЛНА</div>
+</section>
+
+<!-- 12. Шаг 4 -->
+<section class="page">
+  <div class="sc">Шаг 4</div>
+  <h2>Разговор <i>с мужем</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <p style="font-size:16px">Не пытайся выяснить всё сразу. Первый разговор лучше сделать не расследованием, а попыткой понять реальность. Тебе важно выяснить несколько принципиальных вещей.</p>
+    <div class="qa"><span class="n">1</span><div><div class="qt">«Это закончено или продолжается сейчас?»</div><p class="qn">Это гораздо важнее, чем знать каждую деталь прошлого.</p></div></div>
+    <div class="qa"><span class="n">2</span><div><div class="qt">«Ты хочешь продолжать наши отношения или сейчас не понимаешь, чего хочешь?»</div><p class="qn">Не заставляй его сразу дать ответ, если он не готов. Но тебе важно понимать, где вы находитесь.</p></div></div>
+    <div class="qa"><span class="n">3</span><div><div class="qt">«Готов ли ты что-то делать для восстановления наших отношений?»</div><p class="qn">Восстановление невозможно построить усилиями только одного человека.</p></div></div>
+    <div class="qa"><span class="n">4</span><div><div class="qt">«Что ты сам понимаешь о том, что произошло?»</div><p class="qn">Не чтобы услышать оправдание. А чтобы увидеть: человек берёт ответственность или перекладывает всё на тебя.</p></div></div>
+  </div>
+  <div class="foot">ШАГ 4 · РАЗГОВОР С МУЖЕМ</div>
+</section>
+
+<!-- 13. Важно -->
+<section class="page letter">
+  <div class="sc">Важно</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill" style="justify-content:center;gap:16px">
+    <div class="big">Если муж говорит: «Ты сама виновата»</div>
+    <p class="center">- это не означает, что в отношениях не было проблем.</p>
+    <p class="center">Но проблемы в отношениях и решение изменить - не одно и то же.</p>
+    <div class="card2"><p>Можно обсуждать вклад обоих в кризис. И отдельно обсуждать ответственность за нарушение договорённостей пары.</p></div>
+    <p class="center"><b>Это важное разделение.</b></p>
+  </div>
+  <div class="foot">ВАЖНО</div>
+</section>
+
+<!-- 14. Шаг 5 -->
+<section class="page">
+  <div class="sc">Шаг 5</div>
+  <h2><i>Телефон</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <h3 class="sub">Почему так хочется постоянно проверять</h3>
+    <p>После нарушения доверия мозг пытается вернуть ощущение контроля. Поэтому возникает:</p>
+    <div class="cascade">
+      <p>«Где он?» «Кому пишет?»</p>
+      <p>«Почему был онлайн?» «Почему убрал телефон?»</p>
+      <p>«А вдруг опять?»</p>
+    </div>
+    <p>Проверка может на несколько минут снижать тревогу. Но затем тревога возвращается. И возникает желание проверить снова.</p>
+    <div class="card2"><p class="center" style="margin:0"><b>Тревога → проверка → краткое облегчение → новая тревога → новая проверка.</b></p></div>
+  </div>
+  <div class="foot">ШАГ 5 · ТЕЛЕФОН</div>
+</section>
+
+<!-- 15. Шаг 5 продолжение -->
+<section class="page letter">
+  <div class="sc">Шаг 5 · продолжение</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill" style="justify-content:center;gap:14px">
+    <p>Поэтому сейчас важно не ругать себя за это желание. Но и не превращать проверку в единственный способ успокоиться. Спроси себя:</p>
+    <div class="big">«Что именно я хочу узнать?»</div>
+    <p>Если ответ: «Я хочу почувствовать себя в безопасности» - то проверка телефона не решает главную задачу.</p>
+    <p>Безопасность будет восстанавливаться другими способами: <b>через честность, прозрачность, последовательность действий и новые договорённости.</b></p>
+  </div>
+  <div class="foot">ШАГ 5 · ТЕЛЕФОН</div>
+</section>
+
+<!-- 16. Шаг 6 -->
+<section class="page">
+  <div class="sc">Шаг 6</div>
+  <h2>Если он говорит: <i>«Я тебя больше не люблю»</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <p>Это одна из самых болезненных фраз. И очень легко услышать её как: <em>«Со мной что-то не так».</em></p>
+    <p>Но фраза другого человека - это информация о его состоянии и его позиции. Она не является объективным заключением о твоей ценности.</p>
+    <div>
+      <p class="center" style="margin-bottom:6px">Ты можешь ответить спокойно:</p>
+      <div class="card2"><p><em>«Я услышала тебя. Мне очень больно это слышать. Но я не хочу сейчас принимать решения из паники. Давай сначала разберёмся, что произошло между нами и чего каждый из нас хочет дальше».</em></p></div>
+    </div>
+  </div>
+  <div class="foot">ШАГ 6 · «Я ТЕБЯ БОЛЬШЕ НЕ ЛЮБЛЮ»</div>
+</section>
+
+<!-- 17. Шаг 6 продолжение -->
+<section class="page letter">
+  <div class="sc">Шаг 6 · продолжение</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill" style="justify-content:center;gap:14px">
+    <p class="center">Ты не обязана в этот момент:</p>
+    <div class="cascade">
+      <p>убеждать,</p>
+      <p>доказывать свою ценность,</p>
+      <p>обещать стать другой,</p>
+      <p>конкурировать с другой женщиной,</p>
+      <p>соглашаться на всё из страха потерять отношения.</p>
+    </div>
+    <div class="big">Ты тоже участник этих отношений.</div>
+    <p class="center">И у тебя есть право понять, подходят ли тебе те отношения, которые могут получиться дальше.</p>
+  </div>
+  <div class="foot">ШАГ 6 · «Я ТЕБЯ БОЛЬШЕ НЕ ЛЮБЛЮ»</div>
+</section>
+
+<!-- 18. Шаг 7 -->
+<section class="page">
+  <div class="sc">Шаг 7 · Вторые 24 часа</div>
+  <h2>Не спасай брак. <i>Начни собирать картину</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <p class="center">Теперь попробуй записать ответы на четыре вопроса.</p>
+    <div class="qa"><span class="n">1</span><div><div class="qt">Что я знаю точно?</div><p class="qn">Только факты. Например: «Я увидела переписку». «Он сказал, что встречался с ней». «Он говорит, что отношения закончены».</p></div></div>
+    <div class="qa"><span class="n">2</span><div><div class="qt">Что я предполагаю?</div><p class="qn">Например: «Наверное, он давно меня не любит». «Наверное, она лучше меня». «Наверное, он снова будет изменять». Отделяй предположения от фактов.</p></div></div>
+    <div class="qa"><span class="n">3</span><div><div class="qt">Чего я боюсь?</div><p class="qn">Например: «Он уйдёт». «Я останусь одна». «Дети будут страдать». «Я больше никому не буду нужна».</p></div></div>
+  </div>
+  <div class="foot">ШАГ 7 · ВТОРЫЕ 24 ЧАСА</div>
+</section>
+
+<!-- 19. Шаг 7 продолжение -->
+<section class="page letter">
+  <div class="sc">Шаг 7 · продолжение</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill" style="justify-content:center;gap:14px">
+    <div class="qa"><span class="n">4</span><div><div class="qt" style="font-size:22px">Чего я хочу?</div></div></div>
+    <p>И здесь не нужно писать «чтобы он не ушёл». Попробуй глубже:</p>
+    <div class="cascade">
+      <p>«Я хочу уважения».</p>
+      <p>«Я хочу честности».</p>
+      <p>«Я хочу близости».</p>
+      <p>«Я хочу чувствовать себя любимой».</p>
+      <p>«Я хочу семью, в которой мне спокойно».</p>
+      <p>«Я хочу понимать, что происходит».</p>
+    </div>
+    <div class="big">Это уже начало возвращения к себе.</div>
+  </div>
+  <div class="foot">ШАГ 7 · ВТОРЫЕ 24 ЧАСА</div>
+</section>
+
+<!-- 20. Шаг 8 -->
+<section class="page">
+  <div class="sc">Шаг 8 · Третьи 24 часа</div>
+  <h2>Смотрим не только <i>на измену</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <p class="center">Измена - событие. Но отношения существовали до неё. Поэтому постепенно нужно будет исследовать:</p>
+    <h3 class="sub">Что происходило между вами до кризиса?</h3>
+    <div class="cascade">
+      <p>Была ли эмоциональная близость? Разговаривали ли вы?</p>
+      <p>Были ли прикосновения? Была ли сексуальная жизнь?</p>
+      <p>Как вы решали конфликты? Были ли нерешённые обиды?</p>
+      <p>Чувствовал ли каждый из вас себя услышанным?</p>
+      <p>Как вы распределяли быт? Как принимали решения?</p>
+      <p>Что происходило с деньгами, детьми, работой?</p>
+    </div>
+  </div>
+  <div class="foot">ШАГ 8 · ТРЕТЬИ 24 ЧАСА</div>
+</section>
+
+<!-- 21. Шаг 8 продолжение -->
+<section class="page letter">
+  <div class="sc">Шаг 8 · продолжение</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill" style="justify-content:center;gap:16px">
+    <p class="center">И главное:</p>
+    <div class="big">Когда вы перестали чувствовать себя парой?</div>
+    <p>Не для того, чтобы обвинить себя. А для того, чтобы понять систему отношений.</p>
+    <p>Потому что если вы решите восстанавливать брак, недостаточно просто убрать третьего человека. Нужно понять, <b>какие отношения должны появиться вместо прежних</b>.</p>
+  </div>
+  <div class="foot">ШАГ 8 · ТРЕТЬИ 24 ЧАСА</div>
+</section>
+
+<!-- 22. Шаг 9 -->
+<section class="page">
+  <div class="sc">Шаг 9</div>
+  <h2>Три вопроса <i>к себе</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <p class="center"><em>Возьми лист бумаги. И ответь письменно.</em></p>
+    <div class="qa"><span class="n">1</span><div><div class="qt">Если бы я не боялась, что он уйдёт, чего бы я хотела от этих отношений?</div></div></div>
+    <div class="qa"><span class="n">2</span><div><div class="qt">Что для меня больше никогда не должно быть нормой в отношениях?</div></div></div>
+    <div class="qa"><span class="n">3</span><div><div class="qt">Какой женщиной я хочу оставаться независимо от решения мужа?</div></div></div>
+    <p>Не торопись отвечать. Кризис иногда заставляет женщину смотреть только на мужчину: «Что он решит?» А нам нужно постепенно вернуть в картину ещё одного человека. <b>Тебя.</b></p>
+  </div>
+  <div class="foot">ШАГ 9 · ТРИ ВОПРОСА К СЕБЕ</div>
+</section>
+
+<!-- 23. Чек-лист 1 -->
+<section class="page">
+  <div class="sc">Шаг 10 · Сохрани его</div>
+  <h2>Чек-лист <i>«Первые 72 часа»</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <div>
+      <div class="ck-h">Моё состояние</div>
+      <ul class="ck">
+        <li><span class="box"></span>Я поела</li>
+        <li><span class="box"></span>Я пью воду</li>
+        <li><span class="box"></span>Я постаралась поспать</li>
+        <li><span class="box"></span>Я не остаюсь одна, если мне нужна поддержка</li>
+        <li><span class="box"></span>Я дала себе возможность чувствовать то, что чувствую</li>
+      </ul>
+    </div>
+    <div>
+      <div class="ck-h">Мои действия</div>
+      <ul class="ck">
+        <li><span class="box"></span>Я не принимаю решение о будущем брака только из состояния шока</li>
+        <li><span class="box"></span>Я не устраиваю бесконечные допросы</li>
+        <li><span class="box"></span>Я не сравниваю себя с другой женщиной</li>
+        <li><span class="box"></span>Я не пишу ей на эмоциях</li>
+        <li><span class="box"></span>Я не пытаюсь доказать свою ценность</li>
+        <li><span class="box"></span>Я не обещаю изменить себя целиком, чтобы меня не бросили</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot">ШАГ 10 · ЧЕК-ЛИСТ</div>
+</section>
+
+<!-- 24. Чек-лист 2 -->
+<section class="page">
+  <div class="sc">Шаг 10 · продолжение</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <div>
+      <div class="ck-h">Моя ясность</div>
+      <ul class="ck">
+        <li><span class="box"></span>Я отделила факты от своих предположений</li>
+        <li><span class="box"></span>Я понимаю, продолжается ли ситуация сейчас</li>
+        <li><span class="box"></span>Я понимаю, хочет ли муж продолжать отношения или пока не знает</li>
+        <li><span class="box"></span>Я понимаю, готов ли он участвовать в восстановлении отношений</li>
+        <li><span class="box"></span>Я записала, чего хочу сама</li>
+      </ul>
+    </div>
+    <div>
+      <div class="ck-h">Моя опора</div>
+      <ul class="ck">
+        <li><span class="box"></span>Я вспомнила, что моя ценность не определяется выбором другого человека</li>
+        <li><span class="box"></span>Я понимаю, что не обязана решать всё сегодня</li>
+        <li><span class="box"></span>Я знаю, к кому могу обратиться за поддержкой</li>
+        <li><span class="box"></span>Я сделала хотя бы один шаг для себя сегодня</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot">ШАГ 10 · ЧЕК-ЛИСТ</div>
+</section>
+
+<!-- 25. И главное - цитата -->
+<section class="page quote-page">
+  <div class="sc">И главное · сохрани себе</div>
+  <svg class="orn"><use href="#ow"/></svg>
+  <div class="q">Измена - это кризис отношений.<br><b>Но это не приговор твоей ценности.</b></div>
+  <svg class="orn" style="margin-top:18px"><use href="#ow"/></svg>
+  <div class="share" style="color:#F3FBF7">Ты можешь сейчас быть растеряна. Можешь злиться. Можешь плакать. Можешь не знать, хочешь ли сохранить этот брак. Это нормально.</div>
+  <div class="share" style="color:#F3FBF7;margin-top:12px">Тебе не нужно прямо сейчас знать весь путь. Тебе нужен только следующий шаг - вернуть себе немного опоры.</div>
+</section>
+
+<!-- 26. Что дальше -->
+<section class="page final">
+  <div class="sc">Что дальше</div>
+  <h2>Если ты узнала себя <i>в этой истории</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <p style="font-size:15.6px;margin-bottom:6px">Приглашаю тебя в мой MAX-канал. Там я продолжаю разбирать путь от острого кризиса к восстановлению себя и отношений:</p>
+  <div class="cascade" style="text-align:left">
+    <p style="font-size:15px">→ как понять, что на самом деле происходит между вами;</p>
+    <p style="font-size:15px">→ как разговаривать с мужем после измены;</p>
+    <p style="font-size:15px">→ как перестать жить в постоянной тревоге;</p>
+    <p style="font-size:15px">→ как восстанавливается доверие;</p>
+    <p style="font-size:15px">→ что делать, если вы стали жить как соседи;</p>
+    <p style="font-size:15px">→ как возвращать близость;</p>
+    <p style="font-size:15px">→ как строить отношения, в которых не теряешь себя.</p>
+  </div>
+  <a class="mint-btn a" href="https://max.ru/channel_nasledieforme"><span>Я только узнала об измене</span><span class="ar">→</span></a>
+  <a class="mint-btn b" href="https://max.ru/channel_nasledieforme"><span>У нас не измена, но отношения разрушились</span><span class="ar">→</span></a>
+  <a class="url" href="https://max.ru/channel_nasledieforme">max.ru/channel_nasledieforme</a>
+  <div class="foot">ПЕРВЫЕ 72 ЧАСА</div>
+</section>
+
+<a class="dl" href="podarok.pdf" download>Скачать PDF</a>
+
+</body>
+</html>
