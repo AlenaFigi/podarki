@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Дорогая усталость - Алёна Филатова">
+<meta property="og:description" content="Письмо и тест для женщины, которая может всё. Сколько ты платишь собой за свой успех.">
+<meta property="og:image" content="https://alenafigi.github.io/podarki/dorogaya-ustalost/oblozhka.jpg">
+<meta property="og:url" content="https://alenafigi.github.io/podarki/dorogaya-ustalost/">
+<meta property="og:type" content="article">
+<meta name="description" content="Письмо и тест для женщины, которая может всё. Сколько ты платишь собой за свой успех.">
+
+<title>Дорогая усталость - Алёна Филатова</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+SC:wght@500;600&family=Marck+Script&display=swap" rel="stylesheet">
+<style>
+  /* Палитра «Царское Село» - подменяется сборщиком (build.py, палитра tsarskoe) */
+  :root{
+    --ivory:#FAF6EE; --card:#F1EBDF; --sky:#9DB9D5; --navy:#2B3950; --gold:#B09055; --lilac:#A897C4; --ink:#2A2E38; --muted:#7C7A80;
+  }
+  @page{ size:108mm 192mm; margin:0; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:var(--ivory); }
+  body{ font-family:'Cormorant Garamond',serif; font-weight:500; color:var(--ink); font-size:17px; line-height:1.42;
+        font-variant-numeric:lining-nums; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:108mm; height:192mm; position:relative; overflow:hidden; page-break-after:always;
+         background:var(--ivory); padding:34px 30px 40px; display:flex; flex-direction:column; }
+  .page:last-child{ page-break-after:auto; }
+  /* двойная золотая рамка, как на приглашении */
+  .page:before{ content:""; position:absolute; inset:11px; border:1px solid var(--gold); pointer-events:none; }
+  .page:after{ content:""; position:absolute; inset:15px; border:.5px solid var(--gold); opacity:.55; pointer-events:none; }
+
+  .sc{ font-family:'Cormorant SC',serif; font-weight:600; letter-spacing:.2em; font-size:12px; color:var(--gold); text-align:center; }
+  h1,h2{ font-weight:500; color:var(--navy); line-height:1.05; text-align:center; }
+  h2{ font-size:33px; margin:6px 0 4px; }
+  h2 i, h1 i{ font-style:italic; }
+  .orn{ display:block; margin:8px auto 12px; width:120px; height:14px; }
+  p{ margin-bottom:9px; }
+  em{ font-style:italic; color:var(--navy); }
+  b{ font-weight:600; color:var(--navy); }
+  .center{ text-align:center; }
+  .fill{ flex:1; display:flex; flex-direction:column; justify-content:space-between; }
+  .foot{ position:absolute; bottom:22px; left:0; right:0; text-align:center; font-family:'Cormorant SC',serif;
+         font-size:9px; letter-spacing:.3em; color:var(--gold); }
+
+  /* обложка */
+  .cover{ padding:30px 28px 36px; align-items:center; }
+  .arch{ width:272px; height:370px; border-radius:136px 136px 4px 4px; overflow:hidden; margin:6px auto 0;
+         outline:1px solid var(--gold); outline-offset:5px; }
+  .arch img{ width:100%; height:100%; object-fit:cover; object-position:50% 45%; display:block; }
+  .cover h1{ font-size:48px; margin:24px 0 6px; }
+  .cover h1 i{ color:var(--gold); }
+  .cover .sub{ font-style:italic; font-size:17px; text-align:center; color:var(--ink); line-height:1.3; max-width:300px; }
+  .cover .sign{ margin-top:auto; font-family:'Marck Script',cursive; font-size:24px; color:var(--navy); }
+
+  /* письмо */
+  .letter p{ font-size:17.4px; }
+  .letter .big{ font-size:25px; font-style:italic; color:var(--navy); line-height:1.2; text-align:center; margin:6px 0 12px; }
+  .drop:first-letter{ float:left; font-size:58px; line-height:.82; padding:5px 7px 0 0; color:var(--gold); font-style:italic; }
+
+  /* 1980 / 2026 */
+  .era{ display:grid; grid-template-columns:1fr 1fr; column-gap:14px; margin-top:4px; }
+  .era .yr{ font-size:32px; text-align:center; color:var(--navy); font-style:italic; border-bottom:1px solid var(--gold); padding-bottom:2px; margin-bottom:6px; }
+  .era .yr.now{ color:var(--gold); }
+  .era div.c{ font-size:15.8px; line-height:1.25; padding:7px 0; border-bottom:.5px solid rgba(176,144,85,.35); }
+  .era div.c span{ display:block; font-family:'Cormorant SC',serif; font-size:11px; letter-spacing:.18em; color:var(--gold); }
+
+  /* цитата */
+  .quote-page{ background:var(--navy); color:var(--ivory); justify-content:center; }
+  .quote-page:before, .quote-page:after{ border-color:var(--gold); }
+  .quote-page .q{ font-size:34px; font-style:italic; line-height:1.18; text-align:center; color:var(--ivory); }
+  .quote-page .q b{ color:#E3CD9E; font-weight:500; }
+  .quote-page .sc{ color:#E3CD9E; }
+  .quote-page .share{ text-align:center; font-size:15px; font-style:italic; color:var(--sky); margin-top:22px; }
+
+  /* тест */
+  .check{ list-style:none; margin-top:2px; }
+  .check li{ display:flex; gap:10px; padding:5.5px 0; border-bottom:.5px solid rgba(176,144,85,.45); font-size:15.4px; line-height:1.25; }
+  .check li:last-child{ border-bottom:0; }
+  .box{ flex:0 0 18px; height:18px; border:1px solid var(--gold); margin-top:1px; font-size:10px; color:var(--gold);
+        display:flex; align-items:center; justify-content:center; font-family:'Cormorant SC',serif; }
+
+  /* результат */
+  .res{ padding:12px 16px; border:1px solid var(--gold); text-align:center; }
+  .res .n{ font-size:30px; font-style:italic; color:var(--gold); line-height:1; }
+  .res .t{ font-family:'Cormorant SC',serif; font-size:13px; letter-spacing:.16em; color:var(--navy); margin:3px 0 4px; }
+  .res p{ margin:0; font-size:15.6px; line-height:1.3; }
+  .res.dark{ background:var(--navy); border-color:var(--navy); color:var(--ivory); }
+  .res.dark .t{ color:#E3CD9E; } .res.dark .n{ color:#E3CD9E; }
+  .res.soft{ background:var(--card); }
+
+  /* шаги */
+  .step .num{ font-size:26px; font-style:italic; color:var(--gold); line-height:1; }
+  .step h3{ font-family:'Cormorant SC',serif; font-weight:600; font-size:14px; letter-spacing:.14em; color:var(--navy); margin:2px 0 3px; }
+  .step p{ font-size:15.8px; line-height:1.32; margin:0; }
+  .dont{ background:var(--card); padding:11px 16px; font-size:15.4px; text-align:center; font-style:italic; line-height:1.35; }
+
+  /* финал */
+  .final{ justify-content:center; }
+  .btn{ display:block; text-align:center; text-decoration:none; font-family:'Cormorant SC',serif; font-weight:600;
+        letter-spacing:.14em; font-size:14px; padding:14px; margin:14px 0 0; background:var(--navy); color:var(--ivory); }
+  .url{ display:block; text-align:center; font-size:12px; font-style:italic; color:var(--muted); text-decoration:none; margin-top:3px; }
+  .btn.ghost{ background:transparent; color:var(--navy); border:1px solid var(--gold); margin-top:10px; font-size:12.5px; padding:12px; }
+
+  @media screen{
+    html,body{ background:#E7E2DA; }
+    body{ padding:12px 0 24px; }
+    .page{ margin:0 auto 14px; box-shadow:0 6px 22px rgba(40,30,20,.14); }
+    .dl{ display:block; width:108mm; margin:4px auto 0; text-align:center; font-family:'Cormorant Garamond',serif;
+         font-style:italic; font-size:15px; color:#7C7A80; }
+  }
+  @media screen and (max-width:440px){
+    body{ padding:8px 0 20px; }
+    .page{ width:calc(100vw - 16px); height:auto; min-height:calc((100vw - 16px) * 1.78); padding-left:24px; padding-right:24px; }
+    .dl{ width:auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ornament (вставляется на каждой странице) -->
+<svg width="0" height="0" style="position:absolute"><defs>
+  <symbol id="o" viewBox="0 0 120 14"><line x1="0" y1="7" x2="48" y2="7" stroke="#B09055" stroke-width=".8"/><path d="M60 1 L66 7 L60 13 L54 7 Z" fill="none" stroke="#B09055" stroke-width=".9"/><circle cx="60" cy="7" r="1.6" fill="#B09055"/><line x1="72" y1="7" x2="120" y2="7" stroke="#B09055" stroke-width=".8"/></symbol>
+</defs></svg>
+
+<!-- 1. Обложка -->
+<section class="page cover">
+  <div class="sc" style="letter-spacing:.1em;font-size:11px">Письмо и тест для женщины, которая может всё</div>
+  <div class="arch" style="margin-top:18px"><img src="img/tsarskoe-oblozhka.jpg" alt=""></div>
+  <h1>Дорогая <i>усталость</i></h1>
+  <div class="sub">Почему чем больше ты успеваешь, тем меньше в тебе жизни - и как вернуть себе лёгкость</div>
+  <div class="sign">Алёна Филатова</div>
+</section>
+
+<!-- 2. Письмо -->
+<section class="page letter">
+  <div class="sc">I · Письмо</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <div class="big">Ты можешь всё.</div>
+    <p class="drop">Закрыть сделку до обеда. Решить вопрос, который другие решали бы неделю. Помнить про кружки детей, платежи, подарки и дедлайны - одновременно.</p>
+    <div class="big">Ты не можешь только одного - остановиться.</div>
+    <p>Отпуск - и через три дня ты уже «только проверяешь чаты». Выходной - и в голове список на понедельник. Вечер - и вместо тишины ты прокручиваешь разговор с клиентом.</p>
+    <p>Со стороны - успешная, собранная, красивая. А внутри - как будто кто-то тихо приглушил свет.</p>
+    <p class="center"><em>Если узнала себя - это письмо тебе.</em></p>
+  </div>
+  <div class="foot">ДОРОГАЯ УСТАЛОСТЬ</div>
+</section>
+
+<!-- 3. 1980 / 2026 -->
+<section class="page">
+  <div class="sc">II · Что изменилось</div>
+  <h2>Почему мы <i>выгораем</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="era">
+    <div class="yr">1980</div><div class="yr now">2026</div>
+    <div class="c"><span>Рабочий день</span>Закончился - пошла домой</div><div class="c"><span>Рабочий день</span>Закончился, но ты всё ещё «на связи»</div>
+    <div class="c"><span>Болезнь</span>Взяла больничный и болеешь</div><div class="c"><span>Болезнь</span>Выключила камеру и болеешь на созвонах</div>
+    <div class="c"><span>Отпуск</span>Две недели отдыхаешь</div><div class="c"><span>Отпуск</span>Три дня не открываешь чаты, потом - «срочное»</div>
+    <div class="c"><span>Доход</span>Одной работы достаточно</div><div class="c"><span>Доход</span>Работа + проекты + «надо бы ещё что-то»</div>
+    <div class="c"><span>Работа</span>Это то, что ты делаешь</div><div class="c"><span>Работа</span>Это то, кто ты есть</div>
+  </div>
+  <p class="center" style="margin-top:14px;font-size:16.6px">Мы не стали слабее. Мы просто <em>разучились выключаться</em>. И когда работа становится тем, кто ты есть, любая пауза ощущается как угроза.</p>
+  <div class="foot">ДОРОГАЯ УСТАЛОСТЬ</div>
+</section>
+
+<!-- 4. Роскошь -->
+<section class="page letter">
+  <div class="sc">III · О настоящей роскоши</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <p class="drop">Самая дорогая вещь, которую может позволить себе женщина, - не сумка и не отель с видом на океан.</p>
+    <div class="big">Это лёгкость.</div>
+    <p>Проснуться без тревоги. Выпить кофе, не хватаясь за телефон. Позволить мужчине решить вопрос - и не перепроверять. Отдыхать без чувства вины.</p>
+    <div class="big" style="font-size:22px">Мужчина напрягается - получает результат. Женщина расслабляется - получает результат.</div>
+    <p>А мы годами делаем наоборот: напрягаемся сильнее - и удивляемся, почему результата всё меньше, а усталость всё дороже.</p>
+  </div>
+  <div class="foot">ДОРОГАЯ УСТАЛОСТЬ</div>
+</section>
+
+<!-- 5. Цитата для сохранения -->
+<section class="page quote-page">
+  <div class="sc">Сохрани себе</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="q">Выгорание -<br>это не про усталость.<br><b>Это про состояние,<br>из которого ты живёшь.</b></div>
+  <svg class="orn" style="margin-top:18px"><use href="#o"/></svg>
+  <div class="share">И перешли подруге, которая тоже может всё</div>
+</section>
+
+<!-- 6. Тест -->
+<section class="page">
+  <div class="sc">IV · Тест</div>
+  <h2>Сколько стоит <i>твоя</i> усталость?</h2>
+  <p class="center" style="font-size:14.6px;font-style:italic;margin:4px 0 6px">Отметь то, что узнаёшь. Честно, не «как должно быть».</p>
+  <ul class="check">
+    <li><span class="box">1</span><span>Отдыхаешь, но не восстанавливаешься: после отпуска сил хватает на пару дней.</span></li>
+    <li><span class="box">2</span><span>Ты на связи всегда - в выходные, в отпуске, «только проверю чаты».</span></li>
+    <li><span class="box">3</span><span>«Никто, кроме меня»: проще сделать самой, чем объяснить и доверить.</span></li>
+    <li><span class="box">4</span><span>Остановиться - стыдно. Пауза ощущается как потерянное время.</span></li>
+    <li><span class="box">5</span><span>Ты знаешь, чего хотят клиенты, дети, команда. А чего хочешь ты - уже не очень.</span></li>
+    <li><span class="box">6</span><span>Деньги приходят, а радости нет: заработала - и сразу следующая цель.</span></li>
+    <li><span class="box">7</span><span>Тело напоминает о себе: сон, спина, напряжение, которое не уходит.</span></li>
+    <li><span class="box">8</span><span>Срываешься на близких из-за мелочей - а потом грызёшь себя за это.</span></li>
+    <li><span class="box">9</span><span>Даже рядом с мужчиной ты «главная»: решаешь, контролируешь, несёшь.</span></li>
+    <li><span class="box">10</span><span>Ты давно не делала ничего просто для удовольствия.</span></li>
+  </ul>
+  <div class="foot">ДОРОГАЯ УСТАЛОСТЬ</div>
+</section>
+
+<!-- 7. Результат -->
+<section class="page">
+  <div class="sc">V · Твой результат</div>
+  <h2>Посчитай <i>ответы</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <div class="res"><div class="n">0-2</div><div class="t">Лёгкость при тебе</div><p>Ты умеешь выключаться и возвращаться к себе. В твоём темпе это редкий дар - береги его.</p></div>
+    <div class="res soft"><div class="n">3-5</div><div class="t">Успех в кредит</div><p>Ты берёшь силы взаймы у себя будущей. Пока хватает - но проценты уже капают: раздражение, пустота, тело.</p></div>
+    <div class="res dark"><div class="n">6-10</div><div class="t">Дорогая усталость</div><p>Ты платишь за успех собой - и платишь слишком много. Дело не в графике. Дело в состоянии.</p></div>
+    <p class="center" style="font-size:15px;margin:0"><em>Отметила 4 и 5?</em> Если пауза вызывает стыд, а на вопрос «чего ты хочешь?» нет ответа - это уже не усталость. Это потерянный контакт с собой.</p>
+  </div>
+  <div class="foot">ДОРОГАЯ УСТАЛОСТЬ</div>
+</section>
+
+<!-- 8. Три шага -->
+<section class="page">
+  <div class="sc">VI · С чего начать</div>
+  <h2>Три <i>шага</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <div class="step"><div class="num">i.</div><h3>Сними роль «я всё тащу»</h3><p>Роли - как наряды в шкафу: надела, сняла. Беда начинается, когда срастаешься с одной ролью намертво - и уже не помнишь, кто ты без неё.</p></div>
+    <div class="step"><div class="num">ii.</div><h3>Сделай отдых навыком</h3><p>Не «отдохну, когда всё сделаю» - такого дня не будет. Расслабляться - это навык, а не редкая случайность. Его тренируют каждый день.</p></div>
+    <div class="step"><div class="num">iii.</div><h3>Найди, что держит напряжение</h3><p>Если год за годом всё улучшается на 1-5% - ты застряла. Держит эмоциональная память: страх, старый опыт с деньгами. Пока заряд не снят, тело живёт в режиме тревоги.</p></div>
+    <div class="dont">Не лечи выгорание ещё одним отпуском<br>и ещё одним курсом «как всё успевать».</div>
+  </div>
+  <div class="foot">ДОРОГАЯ УСТАЛОСТЬ</div>
+</section>
+
+<!-- 9. Следующий шаг -->
+<section class="page final">
+  <div class="sc">VII · Следующий шаг</div>
+  <h2>Отметила <i>3 и больше?</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <p class="center" style="font-size:17px">Значит, ты переплачиваешь. И выйти из этого проще вдвоём - с тем, кто видит твой сценарий со стороны.</p>
+  <div class="res soft" style="margin-top:8px">
+    <div class="t">Сессия ясности</div>
+    <p>Личная встреча со мной на 20 минут. Разберём, куда уходит твоя энергия, что держит напряжение и с чего начать возвращать себе лёгкость.</p>
+  </div>
+  <a class="btn" href="https://t.me/m/QVHs0vlVZWU6">Написать мне «ЯСНОСТЬ»</a><a class="url" href="https://t.me/m/QVHs0vlVZWU6">t.me/alenafilatova_life</a>
+  <a class="btn ghost" href="https://t.me/nasledieforme">Мой Telegram-канал</a><a class="url" href="https://t.me/nasledieforme">t.me/nasledieforme</a>
+  <div class="foot">ДОРОГАЯ УСТАЛОСТЬ</div>
+</section>
+
+<a class="dl" href="podarok.pdf" download>Скачать PDF</a>
+
+</body>
+</html>

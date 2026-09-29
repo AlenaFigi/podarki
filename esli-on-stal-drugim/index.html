@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Если он стал другим - Алёна Филатова">
+<meta property="og:description" content="Письмо и тест: почему мужчина становится холоднее и грубее - и что с этим сделать тебе.">
+<meta property="og:image" content="https://alenafigi.github.io/podarki/esli-on-stal-drugim/oblozhka.jpg">
+<meta property="og:url" content="https://alenafigi.github.io/podarki/esli-on-stal-drugim/">
+<meta property="og:type" content="article">
+<meta name="description" content="Письмо и тест: почему мужчина становится холоднее и грубее - и что с этим сделать тебе.">
+
+<title>Если он стал другим - Алёна Филатова</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+SC:wght@500;600&family=Marck+Script&display=swap" rel="stylesheet">
+<style>
+  /* Палитра «Царское Село» - подменяется сборщиком (build.py, палитра tsarskoe) */
+  :root{
+    --ivory:#FBF7F2; --card:#F2E7DD; --sky:#D9BBA5; --navy:#3A2219; --gold:#A87F62; --lilac:#C9A89A; --ink:#2E1F19; --muted:#7F6B60;
+  }
+  @page{ size:108mm 192mm; margin:0; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:var(--ivory); }
+  body{ font-family:'Cormorant Garamond',serif; font-weight:500; color:var(--ink); font-size:17px; line-height:1.42;
+        font-variant-numeric:lining-nums; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:108mm; height:192mm; position:relative; overflow:hidden; page-break-after:always;
+         background:var(--ivory); padding:34px 30px 40px; display:flex; flex-direction:column; }
+  .page:last-child{ page-break-after:auto; }
+  /* двойная золотая рамка, как на приглашении */
+  .page:before{ content:""; position:absolute; inset:11px; border:1px solid var(--gold); pointer-events:none; }
+  .page:after{ content:""; position:absolute; inset:15px; border:.5px solid var(--gold); opacity:.55; pointer-events:none; }
+
+  .sc{ font-family:'Cormorant SC',serif; font-weight:600; letter-spacing:.2em; font-size:12px; color:var(--gold); text-align:center; }
+  h1,h2{ font-weight:500; color:var(--navy); line-height:1.05; text-align:center; }
+  h2{ font-size:33px; margin:6px 0 4px; }
+  h2 i, h1 i{ font-style:italic; }
+  .orn{ display:block; margin:8px auto 12px; width:120px; height:14px; }
+  p{ margin-bottom:9px; }
+  em{ font-style:italic; color:var(--navy); }
+  b{ font-weight:600; color:var(--navy); }
+  .center{ text-align:center; }
+  .fill{ flex:1; display:flex; flex-direction:column; justify-content:space-between; }
+  .foot{ position:absolute; bottom:22px; left:0; right:0; text-align:center; font-family:'Cormorant SC',serif;
+         font-size:9px; letter-spacing:.3em; color:var(--gold); }
+
+  /* обложка */
+  .cover{ padding:30px 28px 36px; align-items:center; }
+  .arch{ width:272px; height:370px; border-radius:136px 136px 4px 4px; overflow:hidden; margin:6px auto 0;
+         outline:1px solid var(--gold); outline-offset:5px; }
+  .arch img{ width:100%; height:100%; object-fit:cover; object-position:50% 45%; display:block; }
+  .cover h1{ font-size:48px; margin:24px 0 6px; }
+  .cover h1 i{ color:var(--gold); }
+  .cover .sub{ font-style:italic; font-size:17px; text-align:center; color:var(--ink); line-height:1.3; max-width:300px; }
+  .cover .sign{ margin-top:auto; font-family:'Marck Script',cursive; font-size:24px; color:var(--navy); }
+
+  /* тёмная обложка без фото */
+  .cover.dark{ background:var(--navy); justify-content:center; }
+  .cover.dark .sc{ color:#E6CBB5; }
+  .cover.dark h1{ color:var(--ivory); font-size:58px; margin:18px 0 10px; }
+  .cover.dark h1 i{ color:#E6CBB5; }
+  .cover.dark .sub{ color:#EFE3D8; font-size:18px; }
+  .cover.dark .sign{ color:#E6CBB5; margin-top:0; }
+  .seal{ width:150px; height:150px; margin:0 auto; display:block; }
+  /* письмо */
+  .letter p{ font-size:17.4px; }
+  .letter .big{ font-size:25px; font-style:italic; color:var(--navy); line-height:1.2; text-align:center; margin:6px 0 12px; }
+  .drop:first-letter{ float:left; font-size:58px; line-height:.82; padding:5px 7px 0 0; color:var(--gold); font-style:italic; }
+
+  /* 1980 / 2026 */
+  .era{ display:grid; grid-template-columns:1fr 1fr; column-gap:14px; margin-top:4px; }
+  .era .yr{ font-size:32px; text-align:center; color:var(--navy); font-style:italic; border-bottom:1px solid var(--gold); padding-bottom:2px; margin-bottom:6px; }
+  .era .yr.now{ color:var(--gold); }
+  .era div.c{ font-size:15.8px; line-height:1.25; padding:7px 0; border-bottom:.5px solid rgba(176,144,85,.35); }
+  .era div.c span{ display:block; font-family:'Cormorant SC',serif; font-size:11px; letter-spacing:.18em; color:var(--gold); }
+
+  /* цитата */
+  .quote-page{ background:var(--navy); color:var(--ivory); justify-content:center; }
+  .quote-page:before, .quote-page:after{ border-color:var(--gold); }
+  .quote-page .q{ font-size:34px; font-style:italic; line-height:1.18; text-align:center; color:var(--ivory); }
+  .quote-page .q b{ color:#E6CBB5; font-weight:500; }
+  .quote-page .sc{ color:#E6CBB5; }
+  .quote-page .share{ text-align:center; font-size:15px; font-style:italic; color:var(--sky); margin-top:22px; }
+
+  /* тест */
+  .check{ list-style:none; margin-top:2px; }
+  .check li{ display:flex; gap:10px; padding:5.5px 0; border-bottom:.5px solid rgba(176,144,85,.45); font-size:15.4px; line-height:1.25; }
+  .check li:last-child{ border-bottom:0; }
+  .box{ flex:0 0 18px; height:18px; border:1px solid var(--gold); margin-top:1px; font-size:10px; color:var(--gold);
+        display:flex; align-items:center; justify-content:center; font-family:'Cormorant SC',serif; }
+
+  /* результат */
+  .res{ padding:12px 16px; border:1px solid var(--gold); text-align:center; }
+  .res .n{ font-size:30px; font-style:italic; color:var(--gold); line-height:1; }
+  .res .t{ font-family:'Cormorant SC',serif; font-size:13px; letter-spacing:.16em; color:var(--navy); margin:3px 0 4px; }
+  .res p{ margin:0; font-size:15.6px; line-height:1.3; }
+  .res.dark{ background:var(--navy); border-color:var(--navy); color:var(--ivory); }
+  .res.dark .t{ color:#E6CBB5; } .res.dark .n{ color:#E6CBB5; }
+  .res.soft{ background:var(--card); }
+
+  /* шаги */
+  .step .num{ font-size:26px; font-style:italic; color:var(--gold); line-height:1; }
+  .step h3{ font-family:'Cormorant SC',serif; font-weight:600; font-size:14px; letter-spacing:.14em; color:var(--navy); margin:2px 0 3px; }
+  .step p{ font-size:15.8px; line-height:1.32; margin:0; }
+  .dont{ background:var(--card); padding:11px 16px; font-size:15.4px; text-align:center; font-style:italic; line-height:1.35; }
+
+  /* финал */
+  .final{ justify-content:center; }
+  .btn{ display:block; text-align:center; text-decoration:none; font-family:'Cormorant SC',serif; font-weight:600;
+        letter-spacing:.14em; font-size:14px; padding:14px; margin:14px 0 0; background:var(--navy); color:var(--ivory); }
+  .url{ display:block; text-align:center; font-size:12px; font-style:italic; color:var(--muted); text-decoration:none; margin-top:3px; }
+  .btn.ghost{ background:transparent; color:var(--navy); border:1px solid var(--gold); margin-top:10px; font-size:12.5px; padding:12px; }
+
+  @media screen{
+    html,body{ background:#E7E2DA; }
+    body{ padding:12px 0 24px; }
+    .page{ margin:0 auto 14px; box-shadow:0 6px 22px rgba(40,30,20,.14); }
+    .dl{ display:block; width:108mm; margin:4px auto 0; text-align:center; font-family:'Cormorant Garamond',serif;
+         font-style:italic; font-size:15px; color:#7C7A80; }
+  }
+  @media screen and (max-width:440px){
+    body{ padding:8px 0 20px; }
+    .page{ width:calc(100vw - 16px); height:auto; min-height:calc((100vw - 16px) * 1.78); padding-left:24px; padding-right:24px; }
+    .dl{ width:auto; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <symbol id="o" viewBox="0 0 120 14"><line x1="0" y1="7" x2="48" y2="7" stroke="#A87F62" stroke-width=".8"/><path d="M60 1 L66 7 L60 13 L54 7 Z" fill="none" stroke="#A87F62" stroke-width=".9"/><circle cx="60" cy="7" r="1.6" fill="#A87F62"/><line x1="72" y1="7" x2="120" y2="7" stroke="#A87F62" stroke-width=".8"/></symbol>
+</defs></svg>
+
+<!-- 1. Обложка -->
+<section class="page cover dark">
+  <div class="sc" style="letter-spacing:.1em;font-size:11px;position:absolute;top:34px;left:0;right:0">Письмо и тест для той, кто чувствует перемену</div>
+  <svg class="seal" viewBox="0 0 200 200"><defs><path id="rp" d="M 22,100 A 78,78 0 1 1 178,100 A 78,78 0 1 1 22,100"/></defs>
+    <circle cx="100" cy="100" r="92" fill="none" stroke="#A87F62" stroke-width="1"/>
+    <text style="font-family:'Cormorant SC',serif;font-weight:600;font-size:13px;letter-spacing:.3em;fill:#E6CBB5"><textPath href="#rp" startOffset="0" textLength="486" lengthAdjust="spacing">АЛЁНА ФИЛАТОВА • АЛЁНА ФИЛАТОВА •</textPath></text>
+    <text x="100" y="124" text-anchor="middle" style="font-family:'Marck Script';font-size:64px;letter-spacing:-3px;fill:#FBF7F2">АФ</text>
+    <path d="M 72,133 Q 100,142 128,133" fill="none" stroke="#E6CBB5" stroke-width="1.2" stroke-linecap="round"/></svg>
+  <svg class="orn" style="margin-top:26px"><use href="#o"/></svg>
+  <h1>Если он стал <i>другим</i></h1>
+  <div class="sub">Почему мужчина становится холоднее и грубее - и что с этим сделать тебе, а&nbsp;не&nbsp;ему</div>
+  <svg class="orn" style="margin-top:22px"><use href="#o"/></svg>
+</section>
+
+<!-- 2. Письмо -->
+<section class="page letter">
+  <div class="sc">I · Письмо</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <div class="big">Ты помнишь, каким он был.</div>
+    <p class="drop">Как смотрел. Как звонил просто так. Как спрашивал, как прошёл твой день - и правда слушал ответ.</p>
+    <div class="big">А теперь рядом будто другой человек.</div>
+    <p>Он стал резче. Отвечает коротко. Раздражается на мелочи. А ты всё чаще молчишь - потому что любое слово может стать началом ссоры.</p>
+    <p>И ты перебираешь в голове: что я сделала не так? Может, устал? Может, кто-то появился? Может, само пройдёт?</p>
+    <p class="center"><em>Если узнала себя - это письмо тебе.</em></p>
+  </div>
+  <div class="foot">ЕСЛИ ОН СТАЛ ДРУГИМ</div>
+</section>
+
+<!-- 3. Что происходит -->
+<section class="page letter">
+  <div class="sc">II · Что происходит на самом деле</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <div class="big">Мужчина становится грубее, когда больше не хочет женщину.</div>
+    <p class="drop">Слабый мужчина не уходит красиво. Он начинает вести себя неуважительно - шаг за шагом. Цель простая: довести до срыва, чтобы потом сказать «смотрите, какая она неадекватная», а самому остаться ни при чём.</p>
+    <p>И проблема вдруг оказывается в тебе. А он - без единой капли вины.</p>
+    <div class="big" style="font-size:22px">А что в этот момент происходит с женщиной?</div>
+    <p>Она замолкает. Не потому, что ей всё равно, - а потому, что приняла реальность. Она требовала внимания, пока ещё хотела всё сохранить. <em>Тишина - это конец попыток быть услышанной.</em></p>
+  </div>
+  <div class="foot">ЕСЛИ ОН СТАЛ ДРУГИМ</div>
+</section>
+
+<!-- 4. Цитата для сохранения -->
+<section class="page quote-page">
+  <div class="sc">Сохрани себе</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="q">Мужчина теряет женщину не в тот день, когда она уходит.<br><b>Он теряет её раньше - когда она перестаёт бороться.</b></div>
+  <svg class="orn" style="margin-top:18px"><use href="#o"/></svg>
+  <div class="share">Потому что женщина борется только за то будущее, в которое верит</div>
+  <div class="share" style="margin-top:14px;font-size:13.5px;opacity:.85">Перешли подруге, которой это сейчас нужно</div>
+</section>
+
+<!-- 5. Где твоя сила -->
+<section class="page letter">
+  <div class="sc">III · Где твоя сила</div>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <p class="drop">Когда в паре что-то ломается, женщина обычно делает одно из двух: пытается «исправить» его - или уходит в «я сама». Ни то, ни другое не работает.</p>
+    <div class="big">Ты не можешь заставить его измениться.</div>
+    <p>Но ты можешь поменять то, от чего зависит всё остальное, - своё <b>состояние</b>. Страх, обида, опыт прошлых отношений остаются внутри как эмоциональная память. И ты реагируешь не на сегодняшнего мужчину, а на своё прошлое.</p>
+    <p>Когда меняется состояние женщины, меняется и динамика мужчины рядом с ней. Без уговоров и без войны.</p>
+    <div class="big" style="font-size:21px">Знания есть - изменений нет. Значит, дело не в знаниях.</div>
+  </div>
+  <div class="foot">ЕСЛИ ОН СТАЛ ДРУГИМ</div>
+</section>
+
+<!-- 6. Тест -->
+<section class="page">
+  <div class="sc">IV · Тест</div>
+  <h2>Ваша пара идёт <i>по кругу?</i></h2>
+  <p class="center" style="font-size:14.6px;font-style:italic;margin:4px 0 6px">Отметь то, что узнаёшь. Честно, не «как должно быть».</p>
+  <ul class="check">
+    <li><span class="box">1</span><span>Он стал грубее - по мелочам, на ровном месте. А ты подбираешь слова, чтобы «не спровоцировать».</span></li>
+    <li><span class="box">2</span><span>Вы обсуждаете не проблему, а друг друга: «ты всегда…», «ты никогда…»</span></li>
+    <li><span class="box">3</span><span>Появились сарказм, усмешки, закатывание глаз - с его стороны или с твоей.</span></li>
+    <li><span class="box">4</span><span>Любой разговор заканчивается «я не виноват, это ты» или «это обстоятельства».</span></li>
+    <li><span class="box">5</span><span>Он уходит от разговора: молчит, утыкается в телефон, выходит из комнаты.</span></li>
+    <li><span class="box">6</span><span>Ты замолчала. Не потому, что всё хорошо, - а потому, что устала объяснять.</span></li>
+    <li><span class="box">7</span><span>Ссоры идут по одному кругу: та же тема, те же слова, тот же финал.</span></li>
+    <li><span class="box">8</span><span>Ты тянешь больше, чем он: деньги, дети, быт, решения.</span></li>
+    <li><span class="box">9</span><span>Он принимает денежные решения без тебя - кредит, вложения, крупные траты.</span></li>
+    <li><span class="box">10</span><span>Ты всё ещё ждёшь, что «само рассосётся».</span></li>
+  </ul>
+  <p class="center" style="font-size:12.5px;font-style:italic;color:var(--muted);margin:6px 0 0">Пункты 2-5 - «четыре всадника» психолога Джона Готмана: признаки, по которым он предсказывал развод пар.</p>
+  <div class="foot">ЕСЛИ ОН СТАЛ ДРУГИМ</div>
+</section>
+
+<!-- 7. Результат -->
+<section class="page">
+  <div class="sc">V · Твой результат</div>
+  <h2>Посчитай <i>ответы</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <div class="res"><div class="n">0-2</div><div class="t">Пара в ресурсе</div><p>Сигналы бывают у всех - важно, что ты замечаешь их рано. Пока вы слышите друг друга, поменять что-то легче всего.</p></div>
+    <div class="res soft"><div class="n">3-5</div><div class="t">Сценарий запускается</div><p>Круг уже есть, но он ещё не затянулся. Если ничего не менять, через год он станет привычкой.</p></div>
+    <div class="res dark"><div class="n">6-10</div><div class="t">Вы живёте по кругу</div><p>Это не приговор - это сигнал. Но само не рассосётся. Чем дольше ждать, тем больше сил уходит на то, чтобы просто держаться.</p></div>
+    <p class="center" style="font-size:15px;margin:0"><em>Отметила 3 и 6?</em> Презрение Готман считал самым сильным разрушителем пары. А тишина женщины - момент, когда она перестаёт бороться.</p>
+  </div>
+  <div class="foot">ЕСЛИ ОН СТАЛ ДРУГИМ</div>
+</section>
+
+<!-- 8. Три шага -->
+<section class="page">
+  <div class="sc">VI · Что делать тебе, а не ему</div>
+  <h2>Три <i>шага</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <div class="fill">
+    <div class="step"><div class="num">i.</div><h3>Собери себя</h3><p>Пока ты в тревоге и раздрае, любой разговор с ним - это ещё одна ссора. Сначала верни себе спокойствие и ясность. Не для него - для себя.</p></div>
+    <div class="step"><div class="num">ii.</div><h3>Найди, откуда сценарий</h3><p>Если история повторяется - в тебе живёт эмоциональная память. Пока этот заряд не снят, ты реагируешь из прошлого, а не из сегодня.</p></div>
+    <div class="step"><div class="num">iii.</div><h3>Вернись на своё поле</h3><p>Не пилить и не тащить за двоих, а ясно говорить, чего ты хочешь: «хочу дом», «хочу путешествие», «хочу решать про деньги вместе». Мужчина растёт от ясных ориентиров, а не от давления.</p></div>
+    <div class="dont">Не жди, что «само рассосётся».<br>И не борись за его внимание всё громче.</div>
+  </div>
+  <div class="foot">ЕСЛИ ОН СТАЛ ДРУГИМ</div>
+</section>
+
+<!-- 9. Следующий шаг -->
+<section class="page final">
+  <div class="sc">VII · Следующий шаг</div>
+  <h2>Отметила <i>3 и больше?</i></h2>
+  <svg class="orn"><use href="#o"/></svg>
+  <p class="center" style="font-size:17px">Значит, круг уже есть. И выйти из него проще вдвоём - с тем, кто видит твой сценарий со стороны.</p>
+  <div class="res soft" style="margin-top:8px">
+    <div class="t">Сессия ясности</div>
+    <p>Личная встреча со мной на 20 минут. Разберём, как сценарий повторяется в твоей паре, откуда он и с чего начать выход.</p>
+  </div>
+  <a class="btn" href="https://t.me/m/irj60ogzN2Qy">Написать мне «ЯСНОСТЬ»</a><a class="url" href="https://t.me/m/irj60ogzN2Qy">t.me/alenafilatova_life</a>
+  <a class="btn ghost" href="https://t.me/nasledieforme">Мой Telegram-канал</a><a class="url" href="https://t.me/nasledieforme">t.me/nasledieforme</a>
+  <div class="foot">ЕСЛИ ОН СТАЛ ДРУГИМ</div>
+</section>
+
+<a class="dl" href="podarok.pdf" download>Скачать PDF</a>
+
+</body>
+</html>
