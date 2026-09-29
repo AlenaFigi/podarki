@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Какой сценарий повторяется в твоих отношениях и деньгах? - Алёна Филатова</title>
+<meta name="description" content="Тест на 2 минуты: узнай, какой сценарий снова и снова повторяется в твоих отношениях и деньгах - и с чего начать выход.">
+<meta property="og:title" content="Какой сценарий повторяется в твоих отношениях и деньгах?">
+<meta property="og:description" content="Тест на 2 минуты от Алёны Филатовой. Узнай свой сценарий - и с чего начать выход.">
+<meta property="og:image" content="https://alenafigi.github.io/podarki/test/oblozhka.jpg">
+<meta property="og:url" content="https://alenafigi.github.io/podarki/test/">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Cormorant+SC:wght@600&family=Manrope:wght@400;500;600&family=Marck+Script&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF7F2; --card:#F2E7DD; --choc:#3A2219; --deep:#26150F; --caramel:#A87F62;
+    --light:#E6CBB5; --ink:#2E1F19; --muted:#7F6B60; --line:rgba(168,127,98,.35);
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:var(--bg); }
+  body{ font-family:'Manrope',sans-serif; color:var(--ink); font-size:16px; line-height:1.5; min-height:100vh;
+        -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:460px; margin:0 auto; padding:18px 16px 40px; }
+  .frame{ position:relative; background:var(--bg); padding:30px 24px 34px; min-height:calc(100vh - 36px); display:flex; flex-direction:column; }
+  .frame:before{ content:""; position:absolute; inset:0; border:1px solid var(--caramel); pointer-events:none; }
+  .frame:after{ content:""; position:absolute; inset:4px; border:.5px solid var(--caramel); opacity:.5; pointer-events:none; }
+  .sc{ font-family:'Cormorant SC',serif; font-weight:600; letter-spacing:.2em; font-size:12px; color:var(--caramel); text-align:center; }
+  h1,h2,h3{ font-family:'Cormorant Garamond',serif; font-weight:500; color:var(--choc); line-height:1.08; text-align:center; }
+  h1{ font-size:40px; margin:14px 0 12px; } h1 i, h2 i{ color:var(--caramel); }
+  h2{ font-size:30px; margin:6px 0 10px; }
+  .orn{ display:block; margin:10px auto 14px; width:120px; height:14px; }
+  .lead{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; line-height:1.3; text-align:center; color:var(--ink); }
+  .meta{ text-align:center; color:var(--muted); font-size:14px; margin-top:14px; }
+  .btn{ display:block; width:100%; text-align:center; text-decoration:none; border:0; cursor:pointer;
+        font-family:'Cormorant SC',serif; font-weight:600; letter-spacing:.12em; font-size:15px; padding:16px 14px;
+        background:var(--choc); color:#FBF7F2; margin-top:12px; }
+  .btn.ghost{ background:transparent; color:var(--choc); border:1px solid var(--caramel); }
+  .btn.light{ background:var(--light); color:var(--deep); }
+  .seal{ width:110px; height:110px; display:block; margin:18px auto 0; }
+  .screen{ display:none; animation:fade .45s ease; }
+  .screen.on{ display:flex; flex-direction:column; flex:1; }
+  @keyframes fade{ from{ opacity:0; transform:translateY(8px);} to{ opacity:1; transform:none;} }
+
+  /* вопросы */
+  .progress{ height:2px; background:var(--line); margin:12px 0 22px; }
+  .progress div{ height:100%; background:var(--caramel); width:0; transition:width .35s ease; }
+  .qtext{ font-family:'Cormorant Garamond',serif; font-size:27px; line-height:1.15; color:var(--choc); text-align:center; margin-bottom:22px; }
+  .opt{ display:block; width:100%; text-align:left; background:#fff; border:1px solid var(--line); padding:15px 16px; margin-bottom:10px;
+        font-family:'Manrope',sans-serif; font-size:15.5px; line-height:1.35; color:var(--ink); cursor:pointer; transition:background .15s, border-color .15s; }
+  .opt:active, .opt.sel{ background:var(--card); border-color:var(--caramel); }
+  .back{ background:none; border:0; color:var(--muted); font-size:14px; margin-top:auto; padding-top:14px; cursor:pointer; align-self:center; }
+
+  /* результат */
+  .rtype{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:56px; color:var(--caramel); text-align:center; line-height:1; margin:6px 0 4px; }
+  .rphrase{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; text-align:center; color:var(--choc); margin-bottom:6px; }
+  .rblock{ margin-top:18px; }
+  .rblock h3{ font-family:'Cormorant SC',serif; font-weight:600; font-size:14px; letter-spacing:.14em; color:var(--choc); margin-bottom:5px; }
+  .rblock p{ font-size:15.5px; }
+  .card{ background:var(--card); padding:16px 18px; margin-top:20px; }
+  .card.dark{ background:var(--choc); color:#FBF7F2; }
+  .card.dark h3{ color:var(--light); }
+  .card.dark p{ color:#F3E9E0; }
+  .second{ text-align:center; font-size:14.5px; color:var(--muted); margin-top:8px; }
+  .quote{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:24px; line-height:1.2; text-align:center; color:var(--choc); margin:24px 4px 4px; }
+  .note{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:18px; line-height:1.4; }
+  .toast{ position:fixed; left:50%; bottom:24px; transform:translateX(-50%); background:var(--choc); color:#fff; padding:10px 16px; font-size:14px; opacity:0; transition:opacity .3s; pointer-events:none; }
+  .toast.on{ opacity:1; }
+  .sign{ font-family:'Marck Script',cursive; font-size:24px; color:var(--choc); text-align:center; margin-top:22px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+  <symbol id="o" viewBox="0 0 120 14"><line x1="0" y1="7" x2="48" y2="7" stroke="#A87F62" stroke-width=".8"/><path d="M60 1 L66 7 L60 13 L54 7 Z" fill="none" stroke="#A87F62" stroke-width=".9"/><circle cx="60" cy="7" r="1.6" fill="#A87F62"/><line x1="72" y1="7" x2="120" y2="7" stroke="#A87F62" stroke-width=".8"/></symbol>
+</defs></svg>
+
+<div class="wrap"><div class="frame">
+
+  <!-- Старт -->
+  <section class="screen on" id="start">
+    <div class="sc">Тест на 2 минуты</div>
+    <svg class="seal" viewBox="0 0 200 200"><defs><path id="rp" d="M 22,100 A 78,78 0 1 1 178,100 A 78,78 0 1 1 22,100"/></defs>
+      <circle cx="100" cy="100" r="92" fill="none" stroke="#A87F62" stroke-width="1"/>
+      <text style="font-family:'Cormorant SC',serif;font-weight:600;font-size:13px;letter-spacing:.3em;fill:#A87F62"><textPath href="#rp" textLength="486" lengthAdjust="spacing">АЛЁНА ФИЛАТОВА • АЛЁНА ФИЛАТОВА •</textPath></text>
+      <text x="100" y="124" text-anchor="middle" style="font-family:'Marck Script';font-size:64px;letter-spacing:-3px;fill:#3A2219">АФ</text>
+      <path d="M 72,133 Q 100,142 128,133" fill="none" stroke="#A87F62" stroke-width="1.2" stroke-linecap="round"/></svg>
+    <h1>Какой сценарий <i>повторяется</i> в твоих отношениях и деньгах?</h1>
+    <svg class="orn"><use href="#o"/></svg>
+    <p class="lead">Меняются мужчины, годы, города. А история - одна и та же. Узнай, какой сценарий звучит в тебе, и с чего начать выход.</p>
+    <p class="meta">8 вопросов · отвечай первое, что приходит в голову</p>
+    <div style="margin-top:auto;padding-top:24px"><button class="btn" onclick="begin()">Начать тест</button></div>
+  </section>
+
+  <!-- Вопрос -->
+  <section class="screen" id="quiz">
+    <div class="sc" id="qnum">Вопрос 1 из 8</div>
+    <div class="progress"><div id="bar"></div></div>
+    <div class="qtext" id="qtext"></div>
+    <div id="opts"></div>
+    <button class="back" id="back" onclick="prev()">← назад</button>
+  </section>
+
+  <!-- Результат -->
+  <section class="screen" id="result">
+    <div class="sc">Твой сценарий</div>
+    <div class="rtype" id="rname"></div>
+    <div class="rphrase" id="rphrase"></div>
+    <svg class="orn"><use href="#o"/></svg>
+    <p class="lead" id="rintro" style="font-size:19px"></p>
+    <div class="second" id="rsecond"></div>
+    <div class="rblock"><h3>В отношениях</h3><p id="rlove"></p></div>
+    <div class="rblock"><h3>В деньгах</h3><p id="rmoney"></p></div>
+    <div class="rblock"><h3>Чего это стоит</h3><p id="rprice"></p></div>
+    <div class="card"><div class="rblock" style="margin:0"><h3>Твой первый шаг</h3><p id="rstep"></p></div></div>
+    <div class="quote">Сценарий - это не характер. Это состояние. А состояние меняется.</div>
+
+    <div class="card dark">
+      <h3 style="font-family:'Cormorant SC',serif;font-size:14px;letter-spacing:.14em;margin-bottom:6px">Что дальше</h3>
+      <p>Каждый месяц я провожу практикум, где мы вживую разбираем эти сценарии: откуда он у тебя, почему повторяется и с чего начать выход. <span id="pdate"></span></p>
+      <a class="btn light" id="lnkPract" href="#">Хочу на практикум</a>
+      <a class="btn ghost" id="lnkYasn" href="#" style="color:#FBF7F2;border-color:#E6CBB5">Сессия ясности · 20 минут бесплатно</a>
+    </div>
+    <a class="btn ghost" href="https://t.me/nasledieforme">Мой Telegram-канал</a>
+    <button class="btn ghost" onclick="share()">Отправить тест подруге</button>
+    <button class="back" onclick="restart()" style="margin-top:14px">пройти ещё раз</button>
+    <p class="note">Это не диагноз, а способ посмотреть на себя со стороны. Обычно в каждой из нас звучат несколько сценариев - тест показывает главный.</p>
+    <div class="sign">Алёна Филатова</div>
+  </section>
+
+</div></div>
+<div class="toast" id="toast">Ссылка скопирована</div>
+
+<script>
+/* ===== НАСТРОЙКИ: ссылки (у каждого типа можно поставить свою, чтобы видеть, кто пришёл) ===== */
+var LINKS = {
+  practicum: { opora:"", ozhidanie:"", eho:"", tishina:"" },   // ссылка на практикум (GetCourse), пусто = личка
+  yasnost:   { opora:"", ozhidanie:"", eho:"", tishina:"" },   // ссылка «ЯСНОСТЬ», пусто = личка
+  fallback: "https://t.me/alenafilatova_life"
+};
+var PRACTICUM_DATE = "";   // например: "Ближайший - 5 октября."
+
+var TYPES = {
+  opora: { name:"Опора", phrase:"«Никто, кроме меня»",
+    intro:"Ты сильная. Умеешь зарабатывать, решать, держать. Со стороны - женщина, у которой всё под контролем. А внутри - постоянное напряжение: остановиться нельзя, расслабиться страшно, попросить неловко.",
+    love:"Рядом с тобой мужчине постепенно становится нечего делать - ты всё решишь сама. А ты злишься, что тащишь одна. Круг замыкается.",
+    money:"Доход есть, но он даётся через перенапряжение. И чем сильнее ты напрягаешься, тем меньше результат. Мужчина напрягается - получает результат. Женщина расслабляется - получает результат.",
+    price:"Усталость, которую не лечит отпуск. И одиночество - даже когда рядом мужчина.",
+    step:"На этой неделе попроси о чём-то небольшом. Одну вещь. И не переделывай за него, даже если сделает не так, как ты." },
+  ozhidanie: { name:"Ожидание", phrase:"«Само наладится»",
+    intro:"Ты умеешь надеяться и терпеть. Годами. Что он изменится. Что деньги придут. Что вот-вот станет лучше - надо только ещё немного подождать.",
+    love:"Ты ждёшь, что мужчина придёт и всё решит. И незаметно отдаёшь ему право решать твою жизнь.",
+    money:"Всё зависит от кого-то или чего-то: от мужа, обстоятельств, удачного момента. Только не от тебя.",
+    price:"Годы, прожитые «в черновике». Жизнь, которая начнётся когда-нибудь потом.",
+    step:"Назови одно решение, которое ты откладываешь дольше всего. И сделай в его сторону один маленький шаг - сама и сегодня." },
+  eho: { name:"Эхо", phrase:"«Со мной так уже было»",
+    intro:"Ты многое про себя поняла. Прочитала, проговорила, проработала. Но в важный момент внутри поднимается тот же страх - как будто всё повторяется.",
+    love:"Ты реагируешь не на сегодняшнего мужчину, а на того, кто был раньше. Страх, обида, старый опыт отношений остаются внутри как эмоциональная память - сколько бы лет ни прошло.",
+    money:"Год за годом всё улучшается на 1-5% - будто упираешься в невидимый потолок. Если долго нет сдвига, значит, ты застряла.",
+    price:"Жизнь в прошлом, пока настоящее проходит мимо. Знания есть - изменений нет. Значит, дело не в знаниях.",
+    step:"Замечай моменты, когда твоя реакция сильнее, чем повод. Это и есть эхо. Просто назови его про себя - это уже первый шаг." },
+  tishina: { name:"Тишина", phrase:"«Лишь бы всем было хорошо»",
+    intro:"Ты удобная. Сглаживаешь, подстраиваешься, молчишь. Твои желания - где-то в самом конце списка, после всех остальных.",
+    love:"Мужчина не знает, чего ты хочешь, - потому что ты не говоришь. А несказанное копится и однажды становится тишиной, в которой уже нет вас двоих.",
+    money:"Ты тратишь на всех, кроме себя. Сложно назвать свою цену, попросить больше, взять своё.",
+    price:"Жизнь по чужому сценарию. И ощущение, что тебя не видят, хотя ты стараешься больше всех.",
+    step:"Скажи вслух одно своё желание. Мужчине, подруге или хотя бы себе: «Я хочу…». Мужчина растёт от ясных ориентиров, а не от догадок." }
+};
+
+var Q = [
+  { q:"Когда в семье нужно принять важное решение про деньги, ты обычно…", a:[
+    ["беру на себя - так быстрее и надёжнее","opora"],["жду, что решит он - это же его зона","ozhidanie"],
+    ["тревожусь: вдруг снова будет как тогда","eho"],["соглашаюсь, даже если внутри не согласна","tishina"]]},
+  { q:"Мужчина предлагает помощь. Твоя первая реакция:", a:[
+    ["«Спасибо, я сама»","opora"],["Наконец-то! Вот бы он всегда так","ozhidanie"],
+    ["Жду подвоха: что он попросит взамен?","eho"],["Неловко. Не хочу быть обузой","tishina"]]},
+  { q:"Деньги в твоей жизни чаще всего…", a:[
+    ["зарабатываю, но всё время на пределе","opora"],["приходят волнами - надеюсь, скоро станет лучше","ozhidanie"],
+    ["год за годом на одном уровне, как будто упираюсь в потолок","eho"],["трачу на всех, кроме себя","tishina"]]},
+  { q:"Ссора с мужчиной обычно заканчивается тем, что…", a:[
+    ["я всё решаю и разруливаю сама","opora"],["я жду, что он первым подойдёт и всё исправит","ozhidanie"],
+    ["я вспоминаю все старые обиды разом","eho"],["я замолкаю, лишь бы не стало хуже","tishina"]]},
+  { q:"Фраза, которую ты чаще всего говоришь себе:", a:[
+    ["«Никто, кроме меня»","opora"],["«Потерплю ещё немного - само наладится»","ozhidanie"],
+    ["«Со мной так уже было»","eho"],["«Лишь бы всем было хорошо»","tishina"]]},
+  { q:"Когда ты думаешь о своих желаниях…", a:[
+    ["некогда думать - надо делать","opora"],["мечтаю, что однажды кто-то их исполнит","ozhidanie"],
+    ["хочу, но боюсь снова обжечься","eho"],["стесняюсь сказать о них вслух","tishina"]]},
+  { q:"Что выматывает тебя сильнее всего?", a:[
+    ["держать всё под контролем","opora"],["ждать перемен, которые никак не наступают","ozhidanie"],
+    ["прокручивать прошлое по кругу","eho"],["подстраиваться под других","tishina"]]},
+  { q:"Если честно, в глубине души ты хочешь…", a:[
+    ["выдохнуть и позволить кому-то позаботиться обо мне","opora"],["чтобы жизнь наконец началась - когда всё наладится","ozhidanie"],
+    ["наконец отпустить то, что было","eho"],["чтобы меня услышали","tishina"]]}
+];
+
+var i = 0, answers = [], order = [];
+function $(id){ return document.getElementById(id); }
+function show(id){ ["start","quiz","result"].forEach(function(s){ $(s).classList.toggle("on", s===id); }); window.scrollTo(0,0); }
+function shuffle(a){ a=a.slice(); for(var k=a.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=a[k]; a[k]=a[j]; a[j]=t; } return a; }
+function begin(){ i=0; answers=[]; order=Q.map(function(x){ return shuffle(x.a); }); render(); show("quiz"); }
+function render(){
+  $("qnum").textContent = "Вопрос " + (i+1) + " из " + Q.length;
+  $("bar").style.width = (i/Q.length*100) + "%";
+  $("qtext").textContent = Q[i].q;
+  var box = $("opts"); box.innerHTML = "";
+  order[i].forEach(function(o){
+    var b = document.createElement("button"); b.className = "opt"; b.textContent = o[0];
+    if(answers[i]===o[1]) b.classList.add("sel");
+    b.onclick = function(){ b.classList.add("sel"); answers[i]=o[1]; setTimeout(next, 220); };
+    box.appendChild(b);
+  });
+  $("back").style.visibility = i ? "visible" : "hidden";
+}
+function next(){ if(i < Q.length-1){ i++; render(); } else finish(); }
+function prev(){ if(i>0){ i--; render(); } }
+function finish(){
+  var s = {opora:0, ozhidanie:0, eho:0, tishina:0};
+  answers.forEach(function(t, k){ s[t] += 1 + k*0.01; });   // при равенстве решают более поздние ответы
+  var r = Object.keys(s).sort(function(a,b){ return s[b]-s[a]; });
+  var t = TYPES[r[0]];
+  $("rname").textContent = t.name; $("rphrase").textContent = t.phrase;
+  $("rintro").textContent = t.intro; $("rlove").textContent = t.love; $("rmoney").textContent = t.money;
+  $("rprice").textContent = t.price; $("rstep").textContent = t.step;
+  $("rsecond").textContent = Math.floor(s[r[1]]) >= 2 ? "Ещё в тебе заметно звучит сценарий «" + TYPES[r[1]].name + "»." : "";
+  $("pdate").textContent = PRACTICUM_DATE;
+  $("lnkPract").href = LINKS.practicum[r[0]] || LINKS.fallback;
+  $("lnkYasn").href = LINKS.yasnost[r[0]] || LINKS.fallback;
+  $("bar").style.width = "100%";
+  show("result");
+}
+function restart(){ show("start"); }
+function share(){
+  var url = location.href.split("#")[0].split("?")[0];
+  var data = { title:"Какой сценарий повторяется в твоих отношениях и деньгах?", text:"Прошла тест - очень про меня. Попробуй, 2 минуты:", url:url };
+  if(navigator.share){ navigator.share(data).catch(function(){}); }
+  else if(navigator.clipboard){ navigator.clipboard.writeText(url).then(function(){ var t=$("toast"); t.classList.add("on"); setTimeout(function(){ t.classList.remove("on"); }, 1800); }); }
+}
+</script>
+</body>
+</html>
