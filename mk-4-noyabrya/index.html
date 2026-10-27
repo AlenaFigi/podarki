@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ru">
+<title>Лёгкий взлёт - мастер-класс 4 ноября</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Бесплатный мастер-класс Алёны Филатовой 4 ноября: как сохранить себя после измены, снова поверить в себя и возродить доверие.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata&family=Onest:wght@400;500;600&family=Marck+Script&display=swap">
+<style>
+/* Layout: светлое «небо на рассвете» - фото в поле на ветру справа, текст слева; дальше спокойные полосы вниз, одна сливовая кнопка */
+:root {
+  --bg: #F3F5F7;        /* утренний воздух */
+  --surface: #FFFFFF;
+  --fg: #2A2230;        /* тёмная слива почти чёрная */
+  --muted: #6B6372;
+  --sky: #C9DAEA;       /* небо */
+  --peach: #F1D3C1;     /* рассвет */
+  --wheat: #B8914A;     /* колосья */
+  --plum: #5E2B4C;      /* акцент - кнопка, как лак на фото */
+  --on-plum: #FBF4F7;
+  --line: #DCE2E8;
+  --f-display: "Prata", "Times New Roman", Georgia, serif;
+  --f-body: "Onest", "Segoe UI", Arial, sans-serif;
+  --f-sign: "Marck Script", "Segoe Script", cursive;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17151C; --surface: #211E27; --fg: #F1ECF2; --muted: #B3A9B8;
+    --sky: #2B3A4A; --peach: #4A3530; --wheat: #D6B472; --plum: #C98AB1; --on-plum: #1E1320; --line: #34303B;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #17151C; --surface: #211E27; --fg: #F1ECF2; --muted: #B3A9B8;
+  --sky: #2B3A4A; --peach: #4A3530; --wheat: #D6B472; --plum: #C98AB1; --on-plum: #1E1320; --line: #34303B;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 17px; line-height: 1.6; margin: 0; }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 400; line-height: 1.2; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+a { color: inherit; }
+
+.wrap { max-width: 1080px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+section { padding-block: 64px; }
+.eyebrow { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--wheat); font-weight: 600; }
+h2 { font-size: clamp(28px, 4vw, 40px); }
+
+/* HERO */
+.hero { background: linear-gradient(170deg, var(--sky) 0%, var(--bg) 55%, var(--peach) 140%); padding-block: 40px 56px; }
+.hero .wrap { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: center; }
+.hero-text { display: grid; gap: 22px; min-width: 0; }
+.hero h1 { font-size: clamp(32px, 4.6vw, 52px); }
+.sub { font-family: var(--f-display); font-size: clamp(19px, 2vw, 23px); color: var(--plum); max-width: 30em; }
+.lead { font-size: 19px; color: var(--muted); max-width: 34em; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 16px; }
+.facts b { display: block; font-family: var(--f-display); font-weight: 400; font-size: 24px; color: var(--fg); }
+.facts span { color: var(--muted); }
+.btn { display: inline-block; background: var(--plum); color: var(--on-plum); text-decoration: none; font-weight: 600;
+  font-size: 18px; padding: 18px 34px; border-radius: 999px; border: 0; cursor: pointer; font-family: var(--f-body);
+  transition: transform .2s ease, box-shadow .2s ease; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -10px var(--plum); }
+.btn:focus-visible, input:focus-visible { outline: 3px solid var(--wheat); outline-offset: 3px; }
+.free { font-size: 14px; color: var(--muted); }
+.hero-photo { position: relative; }
+.hero-photo img { display: block; width: 100%; height: auto; border-radius: 220px 220px 20px 20px; }
+.hero-photo .sign { position: absolute; left: -18px; bottom: 26px; font-family: var(--f-sign); font-size: 34px;
+  background: var(--surface); color: var(--plum); padding: 4px 20px 6px; border-radius: 999px; box-shadow: 0 8px 24px -14px #0006; }
+
+/* ДЛЯ КОГО */
+.for { display: grid; gap: 28px; }
+.for ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0 40px; }
+.for li { padding: 18px 0 18px 30px; border-top: 1px solid var(--line); position: relative; }
+.for li::before { content: ""; position: absolute; left: 4px; top: 28px; width: 9px; height: 9px; background: var(--wheat); transform: rotate(45deg); }
+
+/* ПРОГРАММА */
+.program { background: var(--surface); }
+.program .wrap { display: grid; gap: 36px; }
+.topics { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 32px 48px; }
+.topics h3 { font-size: 22px; margin-bottom: 8px; }
+.topics p { color: var(--muted); }
+
+/* ПРАКТИКИ */
+.practice .wrap { display: grid; gap: 32px; }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; }
+.step { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 26px; display: grid; gap: 10px; align-content: start; }
+.step .n { font-family: var(--f-display); font-size: 15px; color: var(--wheat); letter-spacing: .1em; }
+.step h3 { font-size: 22px; }
+.step p { color: var(--muted); font-size: 16px; }
+.bring { display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: baseline; padding: 20px 24px; border-radius: 14px; background: var(--sky); }
+.bring b { font-weight: 600; }
+
+/* ПОДАРОК */
+.gift { background: linear-gradient(160deg, var(--peach), var(--bg) 70%); }
+.gift .wrap { display: grid; gap: 14px; max-width: 760px; text-align: center; justify-items: center; }
+.boxes { width: min(100%, 360px); height: auto; margin-bottom: 8px; overflow: visible; }
+.boxes .shadow { fill: var(--fg); opacity: .08; }
+.boxes .sky { fill: var(--sky); } .boxes .sky-d { fill: var(--sky); filter: brightness(.93); }
+.boxes .plum { fill: var(--plum); } .boxes .plum-d { fill: var(--plum); filter: brightness(.85); }
+.boxes .peach { fill: var(--peach); } .boxes .peach-d { fill: var(--peach); filter: brightness(.94); }
+.boxes .gold { fill: var(--wheat); }
+.boxes .gold-o { fill: none; stroke: var(--wheat); stroke-width: 6; }
+.boxes .plum-o { fill: none; stroke: var(--plum); stroke-width: 5; }
+.boxes .spark { fill: var(--wheat); }
+.boxes .box { transform-box: fill-box; transform-origin: 50% 100%; animation: bob 4s ease-in-out infinite; }
+.boxes .b2 { animation-delay: -1.3s; } .boxes .b3 { animation-delay: -2.6s; }
+.boxes .spark { transform-box: fill-box; transform-origin: center; animation: twinkle 2.8s ease-in-out infinite; }
+.boxes .s2 { animation-delay: -1s; } .boxes .s3 { animation-delay: -2s; }
+@keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes twinkle { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .4; transform: scale(.7); } }
+@media (prefers-reduced-motion: reduce) { .boxes .box, .boxes .spark { animation: none; } }
+.gift h2 em { font-style: normal; color: var(--plum); }
+.gift p { color: var(--muted); max-width: 36em; }
+
+/* ОБО МНЕ */
+.about .wrap { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 48px; align-items: center; }
+.about img { width: 100%; height: auto; border-radius: 20px; display: block; }
+.about-text { display: grid; gap: 16px; min-width: 0; }
+.about-text p { max-width: 38em; }
+.badges { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.badges li { background: var(--sky); border-radius: 999px; padding: 8px 18px; font-size: 15px; color: var(--muted); }
+.badges b { color: var(--fg); font-weight: 600; margin-right: 6px; }
+.mission { font-family: var(--f-display); font-size: 21px; border-left: 2px solid var(--wheat); padding-left: 18px; }
+
+/* РЕГИСТРАЦИЯ */
+.reg { background: var(--surface); }
+.reg .wrap { display: grid; gap: 24px; max-width: 620px; }
+.reg-head { display: grid; gap: 10px; text-align: center; }
+.reg-head p { color: var(--muted); }
+/* GETCOURSE_FORM: на месте блока .form-box встанет код формы из GetCourse */
+.form-box { border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: grid; gap: 16px; background: var(--bg); }
+.sample { font-size: 13px; color: var(--wheat); text-transform: uppercase; letter-spacing: .12em; text-align: center; }
+.form-box label { display: grid; gap: 6px; font-size: 15px; color: var(--muted); }
+.form-box input[type=text], .form-box input[type=email], .form-box input[type=tel] {
+  font: inherit; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; width: 100%; }
+.check { display: flex !important; grid-template-columns: none; gap: 10px; align-items: flex-start; font-size: 14px !important; }
+.check input { margin-top: 4px; accent-color: var(--plum); }
+.form-box .btn { width: 100%; }
+.msg { text-align: center; font-size: 15px; color: var(--plum); }
+
+footer { padding-block: 36px; font-size: 14px; color: var(--muted); }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+@media (max-width: 760px) {
+  section { padding-block: 48px; }
+  .hero .wrap, .about .wrap { grid-template-columns: 1fr; gap: 28px; }
+  .hero-photo { order: -1; max-width: 420px; margin: 0 auto; }
+  .hero-photo .sign { left: 8px; }
+  .for ul, .topics, .steps { grid-template-columns: 1fr; }
+  .btn { width: 100%; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <p class="eyebrow">Школа счастливых отношений · бесплатный мастер-класс</p>
+      <h1>Как сохранить себя после измены, снова поверить в себя и возродить доверие</h1>
+      <p class="lead">Когда почва уходит из-под ног, хочется срочно спасать отношения. Но спасать их не из чего, пока нет вас самой. За 2-3 часа разберём, почему так случилось, и прямо на эфире вернём опору - тремя практиками.</p>
+      <div class="facts">
+        <div><b>4 ноября</b><span>в 13:00 по Москве</span></div>
+        <div><b>2-3 часа</b><span>онлайн, в эфирной комнате</span></div>
+      </div>
+      <div><a class="btn" href="#reg">Зарегистрироваться</a></div>
+      <p class="free">Участие бесплатное. Ссылку на эфир пришлём на почту.</p>
+    </div>
+    <div class="hero-photo">
+      <img src="foto-pole.jpg" alt="Алёна Филатова в пшеничном поле, ветер в волосах" width="1100" height="1100">
+      <div class="sign">Алёна Филатова</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap for">
+    <div>
+      <p class="eyebrow">Для кого этот эфир</p>
+      <h2>Узнаёте себя хотя бы в одном?</h2>
+    </div>
+    <ul>
+      <li>Вы живёте как соседи: ушли страсть, любовь, романтика</li>
+      <li>Измена была давно, прошли годы, а боль не уходит</li>
+      <li>Измена была совсем недавно. Вы не знаете, как жить и как себя вести, почва уходит из-под ног</li>
+      <li>Муж оскорбляет, унижает, обесценивает. Дома холодная война, вы как враги</li>
+    </ul>
+  </div>
+</section>
+
+<section class="program">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Что разберём</p>
+      <h2>О чём будем говорить</h2>
+    </div>
+    <div class="topics">
+      <div><h3>Почему мужчины изменяют</h3><p>И почему ваша ценность от этого никак не становится меньше.</p></div>
+      <div><h3>4 вида созависимых отношений</h3><p>4 разных сценария. Узнаете свой - и поймёте, куда делись вера в себя, доверие к себе и к своему слову. А вместе с ними - опора.</p></div>
+      <div><h3>Сначала вы, потом отношения</h3><p>Как в медицине катастроф: сначала привести в ресурс, потом лечить. Сначала восстанавливаем себя - и только потом отношения и доверие.</p></div>
+      <div><h3>Можно ли вернуть доверие</h3><p>За счёт чего оно выстраивается. Любая счастливая семья держится на ценности друг друга.</p></div>
+      <div><h3>Реальные истории</h3><p>4 истории женщин с разными ситуациями и разными запросами - как они восстанавливались.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="practice">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Прямо на эфире</p>
+      <h2>Три практики, которые сделаем вместе</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">ПРАКТИКА 1</span><h3>Медитация веры в себя</h3><p>Возвращаем ресурс, чтобы было из чего восстанавливать всё остальное.</p></div>
+      <div class="step"><span class="n">ПРАКТИКА 2</span><h3>Фрирайт-рефрейминг</h3><p>Пишем, не останавливаясь, и смотрим на свою историю с другой стороны.</p></div>
+      <div class="step"><span class="n">ПРАКТИКА 3</span><h3>Рисунок «Лёгкий взлёт»</h3><p>Работа через образ и цвет - там, где слов уже не хватает.</p></div>
+    </div>
+    <div class="bring"><b>Подготовьте:</b> <span>воду</span> <span>блокнот</span> <span>бумагу и карандаш, хватит и одного</span> <span>2-3 часа только для себя</span></div>
+  </div>
+</section>
+
+<section class="gift">
+  <div class="wrap">
+    <svg class="boxes" viewBox="0 0 360 210" role="img" aria-label="Три подарочные коробки с бантами">
+      <ellipse class="shadow" cx="180" cy="190" rx="160" ry="10"/>
+      <!-- левая -->
+      <g class="box b1">
+        <rect class="sky" x="40" y="104" width="90" height="80" rx="4"/>
+        <rect class="sky-d" x="34" y="88" width="102" height="20" rx="4"/>
+        <rect class="gold" x="78" y="88" width="14" height="96"/>
+        <ellipse class="gold-o" cx="72" cy="80" rx="15" ry="9" transform="rotate(-20 72 80)"/>
+        <ellipse class="gold-o" cx="98" cy="80" rx="15" ry="9" transform="rotate(20 98 80)"/>
+        <circle class="gold" cx="85" cy="86" r="6"/>
+      </g>
+      <!-- центральная -->
+      <g class="box b2">
+        <rect class="plum" x="135" y="64" width="100" height="120" rx="4"/>
+        <rect class="plum-d" x="128" y="46" width="114" height="24" rx="4"/>
+        <rect class="gold" x="177" y="46" width="16" height="138"/>
+        <rect class="gold" x="135" y="116" width="100" height="14"/>
+        <ellipse class="gold-o" cx="167" cy="36" rx="19" ry="11" transform="rotate(-22 167 36)"/>
+        <ellipse class="gold-o" cx="203" cy="36" rx="19" ry="11" transform="rotate(22 203 36)"/>
+        <path class="gold" d="M180 44 l-14 26 l8 -2 l4 7 z M190 44 l14 26 l-8 -2 l-4 7 z"/>
+        <circle class="gold" cx="185" cy="44" r="7"/>
+      </g>
+      <!-- правая -->
+      <g class="box b3">
+        <rect class="peach" x="245" y="118" width="76" height="66" rx="4"/>
+        <rect class="peach-d" x="239" y="104" width="88" height="18" rx="4"/>
+        <rect class="plum" x="277" y="104" width="12" height="80"/>
+        <ellipse class="plum-o" cx="272" cy="97" rx="12" ry="7" transform="rotate(-20 272 97)"/>
+        <ellipse class="plum-o" cx="294" cy="97" rx="12" ry="7" transform="rotate(20 294 97)"/>
+        <circle class="plum" cx="283" cy="102" r="5"/>
+      </g>
+      <!-- искры -->
+      <path class="spark s1" d="M120 30 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3 z"/>
+      <path class="spark s2" d="M262 52 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 l6 -2 z"/>
+      <path class="spark s3" d="M30 66 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 z"/>
+    </svg>
+    <p class="eyebrow">Для тех, кто останется до конца</p>
+    <h2>Подарок «<em>Энергия женщины на миллион</em>»</h2>
+    <p>Даже на миллиард. Расскажу про свою игру «Как стать женой миллиардера» и отдам подарок всем, кто будет с нами до конца.</p>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <img src="foto-divan.jpg" alt="Алёна Филатова" width="900" height="1125" loading="lazy">
+    <div class="about-text">
+      <p class="eyebrow">Кто ведёт</p>
+      <h2>Алёна Филатова</h2>
+      <ul class="badges">
+        <li><b>14 лет</b>в обучении</li>
+        <li><b>Больше 3 лет</b>работаю с женщинами</li>
+        <li><b>4 детей</b>мама</li>
+        <li><b>«Миссис Иркутск 2020»</b></li>
+      </ul>
+      <p>Я знаю, каково это, когда земля уходит из-под ног. Я была замужем за обеспеченным бизнесменом: путешествия, няня, полный достаток. А потом муж обанкротился - и я осталась одна с четырьмя детьми и долгами в 24 миллиона.</p>
+      <p>Я возрождалась, как птица феникс. Сначала выкарабкивалась на силе воли. Потом искала ответы: что именно я сделала и почему это помогло. Потом пришло профессиональное обучение - коучинг и психология.</p>
+      <p>По первому образованию я архитектор-дизайнер: цвет, история искусств. Поэтому работаю не только словами, но и через образ и рисунок - так быстрее доходим до того, что сидит в подсознании.</p>
+      <p>Сегодня я свободна - в деньгах, в отношениях, в мыслях. Рядом любимый мужчина. И этому можно научиться.</p>
+      <p class="mission">Моя миссия - сделать женщин счастливыми и любимыми, возродить культуру семьи и семейных ценностей, воспитания ментально здоровых и счастливых детей.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reg" id="reg">
+  <div class="wrap">
+    <div class="reg-head">
+      <p class="eyebrow">4 ноября · 13:00 МСК</p>
+      <h2>Зарегистрироваться на эфир</h2>
+      <p>Оставьте почту - пришлём ссылку на эфирную комнату и напомним перед началом.</p>
+    </div>
+    <!-- GETCOURSE_FORM: заменить этот блок кодом формы из GetCourse -->
+    <form class="form-box" id="regForm">
+      <p class="sample">Образец - здесь встанет форма GetCourse</p>
+      <label for="f-name">Имя<input type="text" id="f-name" name="name" autocomplete="given-name" required></label>
+      <label for="f-email">Почта<input type="email" id="f-email" name="email" autocomplete="email" required></label>
+      <label for="f-phone">Телефон<input type="tel" id="f-phone" name="phone" autocomplete="tel"></label>
+      <label class="check" for="f-agree"><input type="checkbox" id="f-agree" required><span>Согласна на обработку персональных данных и с <a href="#">политикой конфиденциальности</a></span></label>
+      <button class="btn" type="submit">Хочу на эфир</button>
+      <p class="msg" id="msg" hidden>Это образец формы. Настоящая регистрация заработает, когда подключим GetCourse.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© Алёна Филатова · Школа счастливых отношений</span>
+    <a href="#">Политика конфиденциальности</a>
+  </div>
+</footer>
+
+<script>
+document.getElementById('regForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  document.getElementById('msg').hidden = false;
+});
+</script>
