@@ -140,7 +140,8 @@ h2 { font-size: clamp(28px, 4vw, 40px); }
   font: inherit; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; width: 100%; }
 .check { display: flex !important; grid-template-columns: none; gap: 10px; align-items: flex-start; font-size: 14px !important; }
 .check input { margin-top: 4px; accent-color: var(--plum); }
-.form-box .btn { width: 100%; }
+.form-box .btn { width: 100%; text-align: center; }
+.reg-go { justify-items: center; text-align: center; }
 .msg { text-align: center; font-size: 15px; color: var(--plum); }
 
 footer { padding-block: 36px; font-size: 14px; color: var(--muted); }
@@ -295,16 +296,11 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: s
       <h2>Зарегистрироваться на эфир</h2>
       <p>Оставьте почту - пришлём ссылку на эфирную комнату и напомним перед началом.</p>
     </div>
-    <!-- GETCOURSE_FORM: заменить этот блок кодом формы из GetCourse -->
-    <form class="form-box" id="regForm">
-      <p class="sample">Образец - здесь встанет форма GetCourse</p>
-      <label for="f-name">Имя<input type="text" id="f-name" name="name" autocomplete="given-name" required></label>
-      <label for="f-email">Почта<input type="email" id="f-email" name="email" autocomplete="email" required></label>
-      <label for="f-phone">Телефон<input type="tel" id="f-phone" name="phone" autocomplete="tel"></label>
-      <label class="check" for="f-agree"><input type="checkbox" id="f-agree" required><span>Согласна на обработку персональных данных и с <a href="#">политикой конфиденциальности</a></span></label>
-      <button class="btn" type="submit">Хочу на эфир</button>
-      <p class="msg" id="msg" hidden>Это образец формы. Настоящая регистрация заработает, когда подключим GetCourse.</p>
-    </form>
+    <!-- GETCOURSE_FORM: пока кнопка ведёт на страницу формы в GetCourse; если будет код виджета - вставить сюда -->
+    <div class="form-box reg-go">
+      <a class="btn" href="https://alenafilatovaschool.getcourse.ru/mk-4-noyabrya">Хочу на эфир</a>
+      <p class="free">Откроется короткая форма: почта, имя, телефон. Это займёт меньше минуты.</p>
+    </div>
   </div>
 </section>
 
@@ -315,9 +311,3 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: s
   </div>
 </footer>
 
-<script>
-document.getElementById('regForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  document.getElementById('msg').hidden = false;
-});
-</script>
